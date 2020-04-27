@@ -1,0 +1,73 @@
+/*   BASIC  G R I D  LAYOUT Anna  */
+
+body {
+    display: grid;
+    grid-template-areas: "header""slides""main""ads""footer";
+    grid-template-columns: 1fr 2fr 2fr;
+    margin: 0px;
+}
+
+header {
+    grid-area: header;
+    grid-column: 1/4;
+    grid-row: 1;
+    margin: 0px;
+}
+
+.slides {
+    grid-area: slides;
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
+main {
+    grid-area: main;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+
+.ads {
+    grid-area: ads;
+    grid-column: 1;
+    grid-row: 3;
+    margin: 10px 10px 10px 40px;
+}
+
+footer {
+    grid-area: footer;
+    grid-column: 1/4;
+}
+
+@media only screen and (max-width:950px) { /*the size is just a random guess, need to change when we find the correct one*/
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .slides {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    main {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .ads {
+        grid-column: 1;
+        grid-row: 4;
+        margin: 0px; /*  needs to be changed */
+    }
+
+    footer {
+        grid-column: 1;
+        grid-row: 5;
+    }
+}
+/*   basic grid layout end */
