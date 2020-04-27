@@ -3,12 +3,12 @@ html {
 }
 
 :root {
-    --black: #0D0D0D ;
+    --black: #0D0D0D;
     --white: #fff;
-    --darker-grey: #CBCAC6 ;
-    --light-grey: #EBEBEB ;
-    --brown: #BFA18F ;
-    --beige: #E9D8C0 ;
+    --darker-grey: #CBCAC6;
+    --light-grey: #EBEBEB;
+    --brown: #BFA18F;
+    --beige: #E9D8C0;
 
 }
 
@@ -27,7 +27,9 @@ h1 {
     font-weight: 600;
 }
 
-h2,h3,h4 {
+h2,
+h3,
+h4 {
     font-weight: 500;
 }
 
@@ -43,19 +45,19 @@ body {
 }
 
 /*  H E A D E R */
-header{
+header {
     display: inline-flex;
-/*    padding-top: 10px;*/
+    /*    padding-top: 10px;*/
 }
 
 .logo {
     width: 30em;
     margin: 0px;
-/*    display: inline-block;*/
+    /*    display: inline-block;*/
 }
 
-.tagline{
-    margin-top:auto;
+.tagline {
+    margin-top: auto;
     margin-bottom: 20px;
     margin-left: -120px;
     color: var(--darker-grey);
@@ -88,9 +90,9 @@ header{
     transform: rotate(45deg) translate(-8px, -11px);
 }
 
-.navbar{
+.navbar {
     width: 300px;
-/*    height: 100%;*/
+    /*    height: 100%;*/
     background-color: var(--light-grey);
     position: fixed;
     top: 0px;
@@ -103,11 +105,12 @@ header{
 .change {
     right: 30px;
 }
+
 .burgerMenu {
-/*    display: inline-block;*/
+    /*    display: inline-block;*/
     cursor: pointer;
-/*    margin-left:auto;*/
-/*    padding:55px 80px 0 0;*/
+    /*    margin-left:auto;*/
+    /*    padding:55px 80px 0 0;*/
 
     position: fixed;
     top: 50px;
@@ -115,15 +118,16 @@ header{
 }
 
 .navItem {
-     padding:10px;
+    padding: 10px;
 }
 
-.navLink{
+.navLink {
     font-size: 20px;
     font-weight: lighter;
     padding: 0 5px;
 }
-.navLink:hover{
+
+.navLink:hover {
     /* This is just something - NEED TO DECIDE HOW SHOULD LOOK*/
     border-bottom: solid var(--brown) 0.1px;
     padding-bottom: 5px;
@@ -214,9 +218,86 @@ footer {
         width: 20em;
     }
 
+    .tagline {
+        margin-bottom: 10px;
+        margin-left: -80px;
+        color: var(--darker-grey);
+        font-size: 14px;
+    }
+
+    .burgerMenu {
+        top: 30px;
+        right: 40px;
+    }
+
+    /* burger menu changes to X - this makes it smaller than it was in desktop*/
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 30px;
+        height: 2px;
+        background-color: #333;
+        margin: 8px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -5px);
+        transform: rotate(45deg) translate(-8px, -5px);
+    }
+
+    /* burger menu finished*/
+
+
 }
 
+@media only screen and (max-width:500px) {
 
+    .logo {
+        width: 15em;
+        padding-top: 7px;
+    }
+    .burgerMenu {
+        top: 30px;
+        right: 25px;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100%;
+
+        /*    height: 100%;*/
+        background-color: var(--light-grey);
+        position: fixed;
+        top: 0px;
+        padding: 110px 18px 100px;
+        right: -110%;
+        margin: 0px;
+    }
+
+    .tagline {
+        margin-bottom: 0px;
+        margin-left: -190px;
+        color: var(--darker-grey);
+        font-size: 13px;
+    }
+
+    .change {
+        right: 0;
+    }
+
+    .navItem {
+        padding: 20px;
+        text-align: center;
+    }
+
+
+}
 
 
 
