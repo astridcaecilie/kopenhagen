@@ -1,10 +1,15 @@
+
 /*   BASIC  G R I D  LAYOUT Anna  */
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     display: grid;
     grid-template-areas: "header""slides""main""ads""footer";
     grid-template-columns: 1fr 2fr 2fr;
     margin: 0px;
+
 }
 
 header {
