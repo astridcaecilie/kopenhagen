@@ -17,8 +17,9 @@
 }
 
 /* Next & previous buttons */
+
 i {
-  border: solid black;
+  border: solid #BFA18F;
   border-width: 0 1px 1px 0;
   padding: 10px;
     cursor: pointer;
@@ -70,8 +71,8 @@ i {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.left:hover,
+.right:hover {
     background-color: #CBCAC6;
 }
 
