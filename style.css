@@ -13,6 +13,7 @@
 
 /* Hide the images by default */
 .mySlides {
+    text-align: center;
     display: none;
 }
 
@@ -20,12 +21,11 @@
 
 i {
   border: solid #BFA18F;
-  border-width: 0 1px 1px 0;
+  border-width: 0 3px 3px 0;
   padding: 10px;
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     margin-top: -22px;
     padding: 16px;
     color: #BFA18F;
@@ -77,10 +77,10 @@ i {
 }
 
 /* Caption text */
-.text {
+.caption-text {
     color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
+    font-size: 30px;
+    padding: 20px;
     position: absolute;
     bottom: 8px;
     width: 100%;
