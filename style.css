@@ -1,10 +1,16 @@
+
 /*   BASIC  G R I D  LAYOUT Anna  */
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     display: grid;
     grid-template-areas: "header""slides""main""ads""footer";
     grid-template-columns: 1fr 2fr 2fr;
     margin: 0px;
+    color: #0D0D0D;
+    font-family: "Raleway", sans-serif;
 }
 
 header {
@@ -39,6 +45,19 @@ footer {
     grid-column: 1/4;
 }
 
+/*Fonts and sizes*/
+
+h1{
+    font-weight: 600;
+}
+
+h2{
+    font-weight: 500;
+}
+
+p{
+    font-weight: 300;
+}
 @media only screen and (max-width:950px) { /*the size is just a random guess, need to change when we find the correct one*/
     body {
         grid-template-columns: 1fr;
