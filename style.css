@@ -317,6 +317,8 @@ footer{
     justify-content: center;
 }
 
+/*sections inside the footer*/
+
 .footer-items{
     width: 22%;
     padding: 10px 10px;
@@ -354,11 +356,15 @@ footer ul li{
     height: 25px;
 }
 
+/*social media icons*/
+
 footer img{
     width: 20%;
     margin-top: 10px;
     margin-right: 10px;
 }
+
+/*media queries for footer*/
 
 @media only screen and (max-width: 1085px){
     .footer-items{
