@@ -1,6 +1,7 @@
 /*Grid for calendar*/
 .calendar {
     width: 260px;
+    text-align: center;
 }
 
 .day-of-week,
@@ -12,6 +13,8 @@
     width: 10px;
     margin-top: 5px;
     padding: 0 5px;
+    position: relative;
+    z-index: 2;
 }
 
 .date-grid button:first-child {
@@ -30,6 +33,7 @@
 
 button {
     border: none;
+    background: transparent;
 }
 
 button :hover {
@@ -43,8 +47,6 @@ button :active {
 }
 
 .month {
-    background-color: black;
-    color: white;
     display: flex;
     text-align: center;
 }
@@ -55,3 +57,36 @@ time {
     padding-bottom: 2px;
     padding-left: 3px;
 }
+
+.calendar-marker{
+    height: 35px;
+    width: auto;
+    z-index: 1;
+/*    margin: 20px 10px;*/
+    position: absolute;
+    left: 86px;
+    top: 117px;
+    opacity: .7;
+
+}
+
+.month {
+    display: inline-block;
+    padding: -1px 120px;;
+}
+
+.month p {
+   display:inline-block;
+    width: 200px;
+}
+
+.arrow1 {
+    display: inline;
+    padding-right: 50px;
+}
+
+.arrow2 {
+    display: inline;
+    padding-left: 45px;
+}
+
