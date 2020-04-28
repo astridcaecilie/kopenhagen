@@ -354,6 +354,12 @@ footer ul li{
     height: 25px;
 }
 
+footer img{
+    width: 20%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
 @media only screen and (max-width: 1085px){
     .footer-items{
         width: 44%;
