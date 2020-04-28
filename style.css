@@ -256,6 +256,7 @@ footer {
 
 }
 
+
 @media only screen and (max-width:500px) {
 
     .logo {
@@ -298,6 +299,7 @@ footer {
 /* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 */
+<<<<<<< HEAD
 =======
 
 /*STYLING FOR CAROUSEL*/
@@ -475,3 +477,87 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.8;
 }
+=======
+
+/* FOOTER*/
+
+footer{
+    width: 100%;
+    background: #BFA18F;
+    display: block;
+}
+
+.inner-footer{
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+/*sections inside the footer*/
+
+.footer-items{
+    width: 22%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    margin-left: 30px;
+}
+
+.footer-items p{
+    text-align: justify;
+    line-height: 20px;
+}
+
+.border{
+    height: 2px;
+    width: 40px;
+    background: black;
+}
+
+footer ul{
+    list-style: none;
+    letter-spacing: 0.5px;
+}
+
+footer ul a{
+    text-decoration: none;
+    outline: none;
+}
+
+footer ul a:hover{
+    color: white;
+}
+
+footer ul li{
+    margin: 10px 0;
+    height: 25px;
+}
+
+/*social media icons*/
+
+footer img{
+    width: 20%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/*media queries for footer*/
+
+@media only screen and (max-width: 1085px){
+    .footer-items{
+        width: 44%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .footer-items{
+        width: 100%;
+    }
+}
+
+
+
+>>>>>>> footer
