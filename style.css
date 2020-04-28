@@ -12,18 +12,6 @@ html {
 
 }
 
-.headerLine{
-    display:inline-flex;
-
-}
-.line{
-    border-bottom: solid .09em var(--black);
-    width: 50vw;
-    height: 42px;
-    margin:0 0 30px;
-
-}
-
 a {
     text-decoration: none;
     color: var(--black);
@@ -151,6 +139,18 @@ header {
     border-bottom: solid var(--brown) 0.1px;
     padding-bottom: 5px;
     color: var(--brown);
+}
+
+/* h1 with line*/
+.headerLine{
+    display:inline-flex;
+
+}
+.line{
+    border-bottom: solid .09em var(--black);
+    width: 50vw;
+    height: 42px;
+    margin:0 0 30px;
 }
 
 
