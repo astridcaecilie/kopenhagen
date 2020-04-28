@@ -1,29 +1,138 @@
-
-html{
+html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --black: #0D0D0D;
+    --white: #fff;
+    --darker-grey: #CBCAC6;
+    --light-grey: #EBEBEB;
+    --brown: #BFA18F;
+    --beige: #E9D8C0;
 
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+ul {
+    list-style: none;
+}
 
 /*Fonts and sizes*/
 
-h1{
+h1 {
     font-weight: 600;
 }
 
-h2{
+h2,
+h3,
+h4 {
     font-weight: 500;
 }
 
-p{
+
+p {
     font-weight: 300;
+
 }
 
 body {
-        color: #0D0D0D;
+    color: var(--black);
     font-family: "Raleway", sans-serif;
 }
 
+/*  H E A D E R */
+header {
+    display: inline-flex;
+    /*    padding-top: 10px;*/
+}
+
+.logo {
+    width: 30em;
+    margin: 0px;
+    /*    display: inline-block;*/
+}
+
+.tagline {
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-left: -120px;
+    color: var(--darker-grey);
+}
+
+/* burger menu */
+
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 40px;
+    height: 2px;
+    background-color: #333;
+    margin: 12px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 11px);
+    transform: rotate(-45deg) translate(-9px, 11px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -11px);
+    transform: rotate(45deg) translate(-8px, -11px);
+}
+
+.navbar {
+    width: 300px;
+    /*    height: 100%;*/
+    background-color: var(--light-grey);
+    position: fixed;
+    top: 0px;
+    padding: 110px 0 30px 20px;
+    right: -300px;
+    transition: right .8s;
+    margin-right: -30px;
+}
+
+.change {
+    right: 30px;
+}
+
+.burgerMenu {
+    /*    display: inline-block;*/
+    cursor: pointer;
+    /*    margin-left:auto;*/
+    /*    padding:55px 80px 0 0;*/
+
+    position: fixed;
+    top: 50px;
+    right: 80px;
+}
+
+.navItem {
+    padding: 10px;
+}
+
+.navLink {
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 0 5px;
+}
+
+.navLink:hover {
+    /* This is just something - NEED TO DECIDE HOW SHOULD LOOK*/
+    border-bottom: solid var(--brown) 0.1px;
+    padding-bottom: 5px;
+    color: var(--brown);
+}
 
 
 /*   BASIC  G R I D  LAYOUT Anna  */
@@ -67,7 +176,10 @@ footer {
 }
 
 
-@media only screen and (max-width:950px) { /*the size is just a random guess, need to change when we find the correct one*/
+@media only screen and (max-width:950px) {
+    /*the size is just a random guess, need to change when we find the correct one*/
+
+    /*    basic grid smaller Anna*/
     body {
         grid-template-columns: 1fr;
     }
@@ -90,12 +202,98 @@ footer {
     .ads {
         grid-column: 1;
         grid-row: 4;
-        margin: 0px; /*  needs to be changed */
+        margin: 0px;
+        /*  needs to be changed */
     }
 
     footer {
         grid-column: 1;
         grid-row: 5;
     }
+
+    /*   basic grid layout end */
+
+
+    .logo {
+        width: 20em;
+    }
+
+    .tagline {
+        margin-bottom: 10px;
+        margin-left: -80px;
+        color: var(--darker-grey);
+        font-size: 14px;
+    }
+
+    .burgerMenu {
+        top: 30px;
+        right: 40px;
+    }
+
+    /* burger menu changes to X - this makes it smaller than it was in desktop*/
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 30px;
+        height: 2px;
+        background-color: #333;
+        margin: 8px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -5px);
+        transform: rotate(45deg) translate(-8px, -5px);
+    }
+
+    /* burger menu finished*/
+
+
 }
-/*   basic grid layout end */
+
+@media only screen and (max-width:500px) {
+
+    .logo {
+        width: 15em;
+        padding-top: 7px;
+    }
+
+    .burgerMenu {
+        top: 30px;
+        right: 25px;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100%;
+        padding: 110px 18px 100px;
+        right: -120%;
+        margin: 0px;
+    }
+
+    .tagline {
+        margin-bottom: 0px;
+        margin-left: -190px;
+        color: var(--darker-grey);
+        font-size: 13px;
+    }
+
+    .change {
+        right: 0;
+    }
+
+    .navItem {
+        padding: 20px;
+        text-align: center;
+    }
+
+
+}
+/* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
+https://www.youtube.com/watch?v=BN6fH1nRDxA
+*/
