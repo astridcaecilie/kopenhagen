@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-html {
+<<<<<<< HEAD html {
     scroll-behavior: smooth;
 }
 
@@ -295,16 +294,14 @@ footer {
 
 
 }
+
 /* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 */
 =======
 
-
 /*STYLING FOR CAROUSEL*/
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-* {
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet" > * {
     box-sizing: border-box
 }
 
@@ -334,9 +331,9 @@ https://www.youtube.com/watch?v=BN6fH1nRDxA
 /* Next & previous buttons */
 
 i {
-  border: solid #BFA18F;
-  border-width: 0 3px 3px 0;
-  padding: 10px;
+    border: solid #BFA18F;
+    border-width: 0 3px 3px 0;
+    padding: 10px;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -351,13 +348,13 @@ i {
 }
 
 .right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 .left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 
@@ -380,7 +377,7 @@ i {
     color: #0D0D0D;
     font-size: 25px;
     padding: 20px;
-/*    position: absolute;*/
+    /*    position: absolute;*/
     bottom: 8px;
     width: 100%;
     text-align: center;
@@ -434,38 +431,46 @@ i {
 
 /*EMAIL FORM STYLING*/
 /* Style the form element with a border around it */
+/*
 form {
-  border: 4px solid #f1f1f1;
+    width: 20vw;
+    border: 4px solid #BFA18F;
 }
+*/
 
 /* Add some padding and a grey background color to containers */
 .newsletter-container {
-  padding: 20px;
-  background-color: #f1f1f1;
+    width: 20vw;
+    padding: 20px;
+    background-color: #0D0D0D;
+    color: #EBEBEB;
 }
 
 /* Style the input elements and the submit button */
-input[type=text], input[type=submit] {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+input[type=text],
+input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #CBCAC6;
+    box-sizing: border-box;
 }
 
-/* Add margins to the checkbox */
+/*
+ Add margins to the checkbox
 input[type=checkbox] {
-  margin-top: 16px;
+    margin-top: 16px;
 }
+*/
 
 /* Style the submit button */
 input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
+    color: #0D0D0D;
+    background-color: #EBEBEB;
+    border: 2px #CBCAC6;
 }
 
 input[type=submit]:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
