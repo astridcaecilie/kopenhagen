@@ -19,6 +19,15 @@
     display: none;
 }
 
+/*Crop images*/
+
+.image-crop {
+    overflow: hidden;
+    height: 300px;
+    width: auto;
+    text-align: center;
+}
+
 /* Next & previous buttons */
 
 i {
