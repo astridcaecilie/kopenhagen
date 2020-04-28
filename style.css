@@ -12,6 +12,18 @@ html {
 
 }
 
+.headerLine{
+    display:inline-flex;
+
+}
+.line{
+    border-bottom: solid .09em var(--black);
+    width: 50vw;
+    height: 42px;
+    margin:0 0 30px;
+
+}
+
 a {
     text-decoration: none;
     color: var(--black);
@@ -25,6 +37,7 @@ ul {
 
 h1 {
     font-weight: 600;
+    padding: 0 1em 0 0;
 }
 
 h2,
@@ -42,6 +55,12 @@ p {
 body {
     color: var(--black);
     font-family: "Raleway", sans-serif;
+}
+main{
+    margin: 20px 170px 20px 70px;
+}
+.ads{
+
 }
 
 /*  H E A D E R */
@@ -167,7 +186,7 @@ main {
     grid-area: ads;
     grid-column: 1;
     grid-row: 3;
-    margin: 10px 10px 10px 40px;
+    margin: 10px -10px 10px 70px;
 }
 
 footer {
@@ -291,6 +310,10 @@ footer {
         padding: 20px;
         text-align: center;
     }
+
+    .line{
+    display: none;
+}
 
 
 }
