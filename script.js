@@ -1,15 +1,16 @@
-<<<<<<< HEAD
-const menuIcon = document.querySelector('.burgerMenu');
 
-const navbar = document.querySelector('.navbar')
+//const menuIcon = document.querySelector('.burgerMenu');
 
-menuIcon.addEventListener('click',() => {
-    navbar.classList.toggle("change");
-})
+//const navbar = document.querySelector('.navbar')
+
+//menuIcon.addEventListener('click',() => {
+ //   navbar.classList.toggle("change");
+//})
 
 
 //burger menu code from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js
-=======
+
+//Slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -40,4 +41,4 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
->>>>>>> slideshow
+
