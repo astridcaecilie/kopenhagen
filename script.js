@@ -39,43 +39,19 @@ function showTagData(tagData) {
     const firstLetter = artistName.charAt(0);
     artistNameDisplay.classList.add(firstLetter);
 
-    const h2FirstLetter = document.createElement("h2")
-//    h2FirstLetter.classList.add(firstLetter);
-    console.log(h2FirstLetter.classList)
-    //    h2FirstLetter.textContent = firstLetter;
-
-    //Prófa að gera if statement í stað ^ svo það vonandi endurtaki sig ekki
-document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
-
-    if (firstLetter == h2FirstLetter.classList) {
-        document.querySelector(".artistsFetched").appendChild(artistNameDisplay);
-    } else {
-        h2FirstLetter.textContent = firstLetter;
-        document.querySelector(".artistsFetched").appendChild(artistNameDisplay);
-    }
-    //
+     document.querySelector(".artistsFetched").appendChild(artistNameDisplay); //Get the <ul class="artistsFetched"> that alredy excists in the html and put in the new li's
 
 
-    //    document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
-    document.querySelector(".artistsFetched").appendChild(artistNameDisplay); //Get the <ul class="artistsFetched"> that alredy excists in the html and put in the new li's
-
-
-    // https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?parent=23&orderby=count&order=desc
-    // the nationality
-
-    // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?post=55
-    // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?post=55
-
-    // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event/37?_embed
-
-    // get id
-    // get tag name
-    // get category if .parent == 23 get name
-    //
-    //
-    //
 
 }
+
+
+
+
+
+
+
+
 
 
 // burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
