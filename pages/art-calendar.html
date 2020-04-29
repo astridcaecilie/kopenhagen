@@ -47,11 +47,114 @@
             <div class="line"></div>
         </div>
 
-                <div>
-        <label for="choose-date">Choose a date</label>
-        <input type="date">
+        <div class="calendar-top">
+
+            <div>
+                <label for="choose-date">Choose a date</label>
+                <!--        <input type="date">-->
+                <div class="calendar">
+                    <div class="month">
+                        <p><span class="arrow1">&#x27e8</span> May <span class="arrow2">&#x27e9</span></p>
+                    </div>
+                    <div class="day-of-week">
+                        <div class="day">Mo</div>
+                        <div class="day">Tu</div>
+                        <div class="day">We</div>
+                        <div class="day">Th</div>
+                        <div class="day">Fr</div>
+                        <div class="day">Sa</div>
+                        <div class="day">Su</div>
+                    </div>
+                    <div class="date-grid">
+                        <button><time datetime="2020-05-01">1</time></button>
+                        <button><time datetime="2020-05-02">2</time></button>
+                        <button><time datetime="2020-05-03">3</time></button>
+                        <button><time datetime="2020-05-04">4</time></button>
+                        <button><time datetime="2020-05-05">5</time></button>
+                        <button><time datetime="2020-05-06">6</time></button>
+                        <button><time datetime="2020-05-07">7</time></button>
+                        <button><time datetime="2020-05-08">8</time></button>
+                        <button><time datetime="2020-05-09">9</time></button>
+                        <button><time datetime="2020-05-10">10</time></button>
+                        <button><time datetime="2020-05-11">11</time></button>
+                        <button><time datetime="2020-05-12">12</time></button>
+                        <button><time datetime="2020-05-13">13</time></button>
+                        <button><time datetime="2020-05-14">14</time></button>
+                        <button><time datetime="2020-05-15">15</time></button>
+                        <button><time datetime="2020-05-16">16</time></button>
+                        <button><time datetime="2020-05-17">17</time></button>
+                        <button><time datetime="2020-05-18">18</time></button>
+                        <button><time datetime="2020-05-19">19</time></button>
+                        <button><time datetime="2020-05-20">20</time></button>
+                        <button><time datetime="2020-05-21">21</time></button>
+                        <button><time datetime="2020-05-22">22</time></button>
+                        <button><time datetime="2020-05-23">23</time></button>
+                        <button><time datetime="2020-05-24">24</time></button>
+                        <button><time datetime="2020-05-25">25</time></button>
+                        <button><time datetime="2020-05-26">26</time></button>
+                        <button><time datetime="2020-05-27">27</time></button>
+                        <button><time datetime="2020-05-28">28</time></button>
+                        <button><time datetime="2020-05-29">29</time></button>
+                        <button><time datetime="2020-05-30">30</time></button>
+                        <button><time datetime="2020-05-31">31</time></button>
+                    </div>
+                    <img class="calendar-marker" src="images/calendar-marker-02.svg" alt="marker">
+
+                </div>
+            </div>
+            <div>
+                <label for="quick-search">Quick Search</label>
+                <h3>Today</h3>
+                <h3>This Week</h3>
+                <h3>Next Week</h3>
+
+                <label for="location">Location</label>
+                <input type="location">
+                <!--                This is not finished :p -->
+            </div>
         </div>
 
+        <h1 class="h1-calendar-page">18. Maj</h1>
+        <article class="article-institution">
+            <h2 class="temp-institution">Louisiana</h2>
+        </article>
+        <template>
+        <article class="temp-calendar-page">
+            <div>
+                <h4 class="temp-event-name">Hot Pink Turquoise</h4>
+                <h5 class="temp-artist">Ann Veronica Janssens</h5>
+                <p class="temp-paragraph">I kirkebys tilfælde ahr skulpturens fremkomst i hans værk i begyndelsen af 1980'erne en helt afgørende betydning for udviklingen af maleriet. Udstillingen vil - blandt andet takket være generøse indlån - vise mange a Kirkebys skulpturer. Også værker vi ikke er vant til at se.</p>
+                <h6 class="temp-date">23. april - 6. may</h6>
+            </div>
+            <img class="temp-image" src="../images/ann-veronica-exhibition.jpg" alt="Ann Veronica">
+        </article>
+        </template>
+
+<!--
+        <article class="temp-calendar-page">
+            <div>
+                <h4 class="temp-event-name">Louisiana on Paper</h4>
+                <h5 class="temp-artist">Nancy Spero</h5>
+                <p class="temp-paragraph">Udstillingen Louisiana on Paper præsenterer i 2020 den amerikanske kunstner Nancy Spero (1926-2009). Hendes mangesidige værk we wr opgør med magthavere af enhver slags - politisk undertrykkelse, racisme og mandlig dominans. Den menneskelige skikkelse er det centrale motiv og et forbindende element.</p>
+                <h6 class="temp-date">3. feb. - 30. april</h6>
+            </div>
+            <img src="../images/nancy-spero-exhibition.jpg" alt="Ann Veronica">
+        </article>
+
+        <article class="article-institution">
+            <h2 class="temp-institution">Copenhagen Contemporary</h2>
+        </article>
+        <article class="temp-calendar-page">
+            <div>
+                <h4 class="temp-event-name">Art is Life</h4>
+                <h5 class="temp-artist">Jacob Dahlgren</h5>
+                <p class="temp-paragraph">Nærmest umærkeligt har vi fået et helt seævfølgeligt forhold til Kirkebys bronzer - de står bare der i parken og optræder her og der i samlingen med største naturlighed. Nu forsøger vi at skrive fortællingen om, hvad der egentlig er på færde i disse mørke ansamlinger af stof, i lyset af, nå ja, alt det lys...</p>
+                <h6 class="temp-date">25. aug - 1. june</h6>
+            </div>
+            <img src="../images/jacob-dahlgren-exhibition.jpeg" alt="Ann Veronica">
+
+        </article>
+-->
 
     </main>
 
@@ -71,7 +174,9 @@
 
 
     <script src="../script.js"></script>
-</body></html>
+</body>
+
+</html>
 
 <!--
 burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and

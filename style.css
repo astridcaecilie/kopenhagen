@@ -12,15 +12,16 @@ html {
 
 }
 
-.headerLine{
-    display:inline-flex;
+.headerLine {
+    display: inline-flex;
 
 }
-.line{
+
+.line {
     border-bottom: solid .09em var(--black);
     width: 50vw;
     height: 42px;
-    margin:0 0 30px;
+    margin: 0 0 30px;
 
 }
 
@@ -56,12 +57,12 @@ body {
     color: var(--black);
     font-family: "Raleway", sans-serif;
 }
-main{
+
+main {
     margin: 20px 170px 20px 70px;
 }
-.ads{
 
-}
+.ads {}
 
 /*  H E A D E R */
 header {
@@ -195,6 +196,149 @@ footer {
 }
 
 
+/*Calendar styling*/
+
+.calendar {
+    width: 260px;
+    text-align: center;
+}
+
+.day-of-week,
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 16px;
+    height: 10px;
+    width: 10px;
+    margin-top: 5px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.date-grid button:first-child {
+    grid-column: 5;
+}
+
+.day {
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.date-grid {
+    margin-top: 15px;
+    grid-gap: 3px;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+button :hover {
+    background-color: black;
+    color: white;
+}
+
+button :active {
+    background-color: black;
+    color: white;
+}
+
+.month {
+    display: flex;
+    text-align: center;
+}
+
+time {
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+}
+
+.calendar-marker {
+    height: 35px;
+    width: auto;
+    z-index: 1;
+    /*    margin: 20px 10px;*/
+    position: absolute;
+    left: 86px;
+    top: 117px;
+    opacity: .7;
+
+}
+
+.month {
+    display: inline-block;
+    padding: -1px 120px;
+    ;
+}
+
+.month p {
+    display: inline-block;
+    width: 200px;
+}
+
+.arrow1 {
+    display: inline;
+    padding-right: 50px;
+}
+
+.arrow2 {
+    display: inline;
+    padding-left: 45px;
+}
+
+.calendar-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/*Calendar styling end*/
+/*Calendar page styling*/
+
+.h1-calendar-page {
+    padding-top: 50px;
+}
+
+/*template calendar page*/
+
+.temp-calendar-page > img {
+    height: 200px;
+    max-width: 250px;
+    float: left;
+    order: -1;
+}
+
+.temp-calendar-page,
+.article-institution {
+        margin-left: 70px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
+}
+.article-institution {
+    grid-column: 1/-1;
+    max-width: 300px;
+}
+.temp-paragraph {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.temp-event-name {
+    margin: 0;
+}
+.temp-artist {
+    margin-top: 5px;
+}
+
+.temp-calendar-page {
+    margin-bottom: 30px;
+}
+
 @media only screen and (max-width:950px) {
     /*the size is just a random guess, need to change when we find the correct one*/
 
@@ -311,12 +455,13 @@ footer {
         text-align: center;
     }
 
-    .line{
-    display: none;
-}
+    .line {
+        display: none;
+    }
 
 
 }
+
 /* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 */
