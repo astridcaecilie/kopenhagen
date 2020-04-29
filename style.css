@@ -317,7 +317,7 @@ time {
     margin-left: 70px;
     display: grid;
     grid-template-columns: 250px 2fr;
-    grid-gap: 15px;
+    grid-gap: 29px;
     margin-bottom: 10px;
 }
 
