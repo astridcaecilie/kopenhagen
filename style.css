@@ -198,6 +198,10 @@ footer {
     padding: 1em 0;
 }
 
+.hideit{
+    display: none;
+}
+
 
 @media only screen and (max-width:950px) {
     /*the size is just a random guess, need to change when we find the correct one*/

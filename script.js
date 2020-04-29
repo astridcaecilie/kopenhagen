@@ -38,6 +38,7 @@ function showEventData(EventData) {
     }
 
     function getInfoById(info) {
+
         var artistName = info._embedded["wp:term"][1][0].name;
         console.log("artistName");
         console.log(artistName);
@@ -52,16 +53,21 @@ function showEventData(EventData) {
 
         const artistNameDisplay = document.createElement("li"); //I create <li>
 
-        artistNameDisplay.classList.add("artistNameDisplay"); //add a class to the <li> so it becomes <li class="artistNameDisplay">
+         const firstLetter = artistName.charAt(0);
+        console.log(firstLetter)
+        artistNameDisplay.classList.add(firstLetter);
+
+//        artistNameDisplay.classList.add("artistNameDisplay"); //add a class to the <li> so it becomes <li class="artistNameDisplay">
 
         artistNameDisplay.textContent = artistName; //make the li include the names
+
 
         document.querySelector(".artistsFetched").appendChild(artistNameDisplay); //Get the <ul class="artistsFetched"> that alredy excists in the html and put in the new li's
 
         //Getting the fist letter of each name and make it a class on the element
-        const firstLetter = artistName.charAt(0);
-        console.log(firstLetter)
-        artistNameDisplay.classList.add(firstLetter);
+
+
+
 }
 
     // https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?parent=23&orderby=count&order=desc
