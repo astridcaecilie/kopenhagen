@@ -480,60 +480,104 @@ input[type=submit]:hover {
 
 /*MAIN PAGE*/
 
-main{
+.main-wrapper{
     width: 100%;
-    display: block;
+    overflow: hidden;
+    margin: 20px;
 }
 
-.main-border{
-    height: 1.5px;
-    width 10px;
+.border-main{
+    width: 90%;
+    height: 2px;
     background: black;
 }
 
-.container-main{
-    width: 95%;
-    overflow: hidden;
-    margin: 20px auto;
-    padding: 20px;
+@supports (display:grid){
+    main{
+        max-width: 10000px;
+        margin: 0;
+    }
+
+    .event-item{
+        margin: 0;
+        background: #EBEBEB;
+        margin: 10px;
+        display: flex;
+        flex-flow: column;
+        width: 200px;
+        height: 250px;
+
+    }
+
+    .events{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        margin-top: 50px;
+        padding: 50px;
+    }
 }
 
-.container-main ul{
-    padding: 0px;
-    margin: 0px;
+.events img{
+    width: 50%;
+    margin-left: 70px;
+    margin-top: 20px;
 }
 
-.container-main ul li{
-    list-style: none;
-    float: left;
-    width: 22%;
-    height: 300px;
-    background: #EBEBEB;
-    margin: 40px 20px 0px 20px;
-    box-sizing: border-box;
-}
 
-.container-main ul li .title{
-    font-weight: 500;
+
+.events h3{
+    margin-left: 10px;
     text-align: end;
-    margin-top: 100px;
+    padding-right: 5px;
 }
 
-.container-main ul li .artist{
-    font-weight: 300;
+.events h4{
+    margin-top: 0;
+    font-size: 10px;
     text-align: end;
+    padding-right: 8px;
 }
 
-.container-main ul li .date{
-    font-weight: 10;
+.events p{
+    margin-top: 0;
+    font-size: 14px;
     text-align: end;
+    padding-right: 8px;
 }
 
-.container-main ul li .image{
-    position: absolute;
-    width: 8%;
-    float: right;
+
+
+button{
+    margin: 10px;
+    background: #BFA18F;
+    font-size: 1rem;
+    width: 200px;
+    height: 50px;
+    font-family: "raleway", sans-serif;
 }
+
+  .magazine-main{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
