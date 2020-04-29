@@ -37,16 +37,15 @@ function showEvents(events) {
     console.log(events.title.rendered)
 
 
+//    copy.querySelector(".temp.institution").textContent = events._embedded["wp:term"][1][0].name;
     copy.querySelector(".temp-event-name").textContent = events.title.rendered;
     copy.querySelector(".temp-artist").textContent = events.tags; //only showing tag id instead of name
     copy.querySelector(".temp-paragraph").textContent = events.excerpt.rendered; //showing html tags
 
     copy.querySelector(".start-date").textContent = events.start_date;
-//    copy.querySelector(".to-date").textContent = events.end_date;
+    copy.querySelector(".to-date").textContent = events.end_date;
 
-    if (events.end_date == true) {
-        copy.querySelector(".to-date").textContent = events.end_date;
-    } else {
+    if (events.end_date == false) {
         copy.querySelector(".to-date").classList.add("hide");
     }
 
