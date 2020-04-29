@@ -10,6 +10,8 @@ menuIcon.addEventListener('click', () => {
 
 //const eventsLink = "https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event?_embed";
 
+
+
 fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags")
     .then(res => res.json())
     .then(handleTagData)
@@ -27,6 +29,9 @@ function showTagData(tagData) {
 
 
     const artistName = tagData.name; // Here I get each artists name
+    const artistTagId = tagData.id; // Here I get each artist tag id
+    console.log("artistTagId");
+    console.log(artistTagId);
 
     const artistNameDisplay = document.createElement("li"); //I create <li>
 
@@ -42,9 +47,20 @@ function showTagData(tagData) {
     artistNameDisplay.classList.add(firstLetter);
 
 
+// https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?parent=23&orderby=count&order=desc
+    // the nationality
 
+   // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?post=55
+   // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?post=55
 
+    // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event/37?_embed
 
+    // get id
+    // get tag name
+    // get category if .parent == 23 get name
+    //
+    //
+    //
 
 }
 
