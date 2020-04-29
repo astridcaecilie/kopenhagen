@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD html {
     scroll-behavior: smooth;
 }
@@ -304,6 +305,12 @@ https://www.youtube.com/watch?v=BN6fH1nRDxA
 
 /*STYLING FOR CAROUSEL*/
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet" > * {
+=======
+/*STYLING FOR CAROUSEL*/
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+* {
+>>>>>>> slideshow
     box-sizing: border-box
 }
 
@@ -333,9 +340,15 @@ https://www.youtube.com/watch?v=BN6fH1nRDxA
 /* Next & previous buttons */
 
 i {
+<<<<<<< HEAD
     border: solid #BFA18F;
     border-width: 0 3px 3px 0;
     padding: 10px;
+=======
+  border: solid #BFA18F;
+  border-width: 0 3px 3px 0;
+  padding: 10px;
+>>>>>>> slideshow
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -350,6 +363,7 @@ i {
 }
 
 .right {
+<<<<<<< HEAD
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
@@ -357,6 +371,15 @@ i {
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+=======
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+>>>>>>> slideshow
 }
 
 
@@ -379,7 +402,11 @@ i {
     color: #0D0D0D;
     font-size: 25px;
     padding: 20px;
+<<<<<<< HEAD
     /*    position: absolute;*/
+=======
+/*    position: absolute;*/
+>>>>>>> slideshow
     bottom: 8px;
     width: 100%;
     text-align: center;
@@ -430,6 +457,7 @@ i {
 }
 
 /*END : STYLING FOR CAROUSEL*/
+<<<<<<< HEAD
 
 /*EMAIL FORM STYLING*/
 /* Style the form element with a border around it */
@@ -560,3 +588,5 @@ footer img{
 
 
 
+=======
+>>>>>>> slideshow

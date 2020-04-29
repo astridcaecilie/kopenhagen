@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
+=======
+<!--<html lang="">-->
+>>>>>>> slideshow
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopenhagen</title>
@@ -9,6 +14,7 @@
 </head>
 
 <body>
+
 
     <header>
         <figure class="logo">
@@ -42,7 +48,48 @@
 
     <aside class="slides">
         <!--only for the slides-->
-        <h1>slides go here</h1>
+        <!--   IMAGE CAROUSEL-->
+    <!--slideshow container-->
+    <div class="slideshow-container">
+
+        <!--    Full with images  and caption text-->
+
+        <div class="mySlides fade">
+            <img class="image-crop" src="images-carousel/slide-1.jpg" alt="">
+            <div class="caption-text">Landskabninger - interview Nana Franscisca Schottländer</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img class="image-crop" src="images-carousel/slide-2.jpg" alt="">
+            <div class="caption-text">Kunst som en bevidsthedsudvidende selvbiografi</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img class="image-crop" src="images-carousel/slide-3.jpg" alt="">
+            <div class="caption-text">Hammershøi i nye klæder</div>
+        </div>
+
+        <!--        Next and Previous Buttons-->
+        <div class="next">
+            <i class="right" onclick="plusSlides(1)"></i>
+        </div>
+        <div class="prev">
+        <i class="left" onclick="plusSlides(-1)"></i>
+        </div>
+        <!--
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+-->
+
+        <!-- The lines -->
+        <div style="text-align:center">
+            <span class="line" onclick="currentSlide(1)"></span>
+            <span class="line" onclick="currentSlide(2)"></span>
+            <span class="line" onclick="currentSlide(3)"></span>
+        </div>
+
+    </div>
+    <!--   /IMAGE CAROUSEL -->
         <!--delete-->
     </aside>
 
@@ -131,3 +178,8 @@
 burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 -->
+=======
+
+    <script src="script.js"></script>
+</body></html>
+>>>>>>> slideshow
