@@ -23,10 +23,6 @@ function handleTagData(handled) {
 }
 
 function showTagData(tagData) {
-    //    console.log("show tagData");
-    //    console.log(tagData);
-
-
 
     const artistName = tagData.name; // Here I get each artists name
     const artistTagId = tagData.id; // Here I get each artist tag id
@@ -34,24 +30,41 @@ function showTagData(tagData) {
     console.log(artistTagId);
 
     const artistNameDisplay = document.createElement("li"); //I create <li>
-
     artistNameDisplay.classList.add("artistNameDisplay"); //add a class to the <li> so it becomes <li class="artistNameDisplay">
 
     artistNameDisplay.textContent = artistName; //make the li include the names
 
-    document.querySelector(".artistsFetched").appendChild(artistNameDisplay); //Get the <ul class="artistsFetched"> that alredy excists in the html and put in the new li's
 
     //Getting the fist letter of each name and make it a class on the element
     const firstLetter = artistName.charAt(0);
-    console.log(firstLetter)
     artistNameDisplay.classList.add(firstLetter);
 
+    const h2FirstLetter = document.createElement("h2")
+//    h2FirstLetter.classList.add(firstLetter);
+    console.log(h2FirstLetter.classList)
+    //    h2FirstLetter.textContent = firstLetter;
 
-// https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?parent=23&orderby=count&order=desc
+    //Prófa að gera if statement í stað ^ svo það vonandi endurtaki sig ekki
+document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
+
+    if (firstLetter == h2FirstLetter.classList) {
+        document.querySelector(".artistsFetched").appendChild(artistNameDisplay);
+    } else {
+        h2FirstLetter.textContent = firstLetter;
+        document.querySelector(".artistsFetched").appendChild(artistNameDisplay);
+    }
+    //
+
+
+    //    document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
+    document.querySelector(".artistsFetched").appendChild(artistNameDisplay); //Get the <ul class="artistsFetched"> that alredy excists in the html and put in the new li's
+
+
+    // https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?parent=23&orderby=count&order=desc
     // the nationality
 
-   // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?post=55
-   // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?post=55
+    // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?post=55
+    // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?post=55
 
     // http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event/37?_embed
 
