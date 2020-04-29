@@ -194,8 +194,19 @@ footer {
     grid-column: 1/4;
 }
 
+
+
+/*    A R T I S T S   */
 .artistNameDisplay{
     padding: 1em 0;
+}
+
+.artistFilters{
+    display: inline-flex;
+    align-items:baseline;
+}
+.sortBy{
+    padding: 0 1em 0 2em;
 }
 
 
