@@ -45,8 +45,8 @@ function showEvents(events) {
     copy.querySelector(".start-date").textContent = events.start_date;
     copy.querySelector(".to-date").textContent = events.end_date;
 
-    if (events.end_date == false) {
-        copy.querySelector(".to-date").classList.add("hide");
+    if (events.end_date == "0000-00-00") {
+        copy.querySelector(".two-dates").classList.add("hide");
     }
 
     //    copy.querySelector(".temp-date").textContent = events.start_date + events.end_date; // works but needs seperation

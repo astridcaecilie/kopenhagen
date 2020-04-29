@@ -343,6 +343,7 @@ time {
     margin-bottom: 30px;
 }
 
+/*Calendar page styling end*/
 
 .hide {
     display: none;
@@ -369,6 +370,8 @@ time {
     main {
         grid-column: 1;
         grid-row: 3;
+                margin: 20px;
+
     }
 
     .ads {
@@ -425,7 +428,30 @@ time {
 
     /* burger menu finished*/
 
+    /*    Calendar page*/
 
+    /*template calendar page*/
+
+    .calendar-top {
+        grid-gap: 40px;
+    }
+
+    .temp-calendar-page > img {
+        max-height: 200px;
+        max-width: 250px;
+        float: inherit;
+        order: -1;
+    }
+
+    .temp-calendar-page,
+    .article-institution {
+        display: block;
+    }
+
+    .temp-calendar-page {
+        padding-bottom: 20px;
+        border-bottom: 1px solid black;
+    }
 }
 
 @media only screen and (max-width:500px) {
@@ -468,6 +494,14 @@ time {
         display: none;
     }
 
+    .calendar-top {
+        display: block;
+        margin-left: 100px;
+    }
+
+    .quick-search {
+        margin-top: 100px;
+    }
 
 }
 
