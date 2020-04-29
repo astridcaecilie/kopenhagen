@@ -306,7 +306,7 @@ time {
 /*template calendar page*/
 
 .temp-calendar-page > img {
-    height: 200px;
+    max-height: 200px;
     max-width: 250px;
     float: left;
     order: -1;
@@ -314,15 +314,17 @@ time {
 
 .temp-calendar-page,
 .article-institution {
-        margin-left: 70px;
+    margin-left: 70px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 15px;
 }
+
 .article-institution {
     grid-column: 1/-1;
     max-width: 300px;
 }
+
 .temp-paragraph {
     font-style: italic;
     font-size: 14px;
@@ -331,12 +333,18 @@ time {
 .temp-event-name {
     margin: 0;
 }
+
 .temp-artist {
     margin-top: 5px;
 }
 
 .temp-calendar-page {
     margin-bottom: 30px;
+}
+
+
+.hide {
+    display: none;
 }
 
 @media only screen and (max-width:950px) {
