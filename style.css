@@ -561,7 +561,7 @@ input[type=submit]:hover {
 
 .magazine-item p{
     display: flex;
-    padding: 10px;
+    padding: 20px;
     font-size: 12px;
 }
 
@@ -579,34 +579,6 @@ button{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* FOOTER*/
