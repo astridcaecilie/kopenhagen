@@ -560,9 +560,10 @@ input[type=submit]:hover {
 
 .magazine-item p{
     display: flex;
-    padding: 20px;
+    padding: 10px;
     font-size: 12px;
 }
+
 
 
 button{
