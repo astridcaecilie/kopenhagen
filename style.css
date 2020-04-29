@@ -511,7 +511,7 @@ input[type=submit]:hover {
 
     .events{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         margin-top: 50px;
         padding: 50px;
     }
@@ -522,8 +522,6 @@ input[type=submit]:hover {
     margin-left: 70px;
     margin-top: 20px;
 }
-
-
 
 .events h3{
     margin-left: 10px;
@@ -545,10 +543,31 @@ input[type=submit]:hover {
     padding-right: 8px;
 }
 
+.magazine-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.magazine-item{
+    margin: 10px;
+}
+
+.magazine-item img{
+    width: 50%;
+    float: left;
+}
+
+.magazine-item p{
+    display: flex;
+    padding: 10px;
+    font-size: 12px;
+}
 
 
 button{
-    margin: 10px;
+    margin-top: 10px;
     background: #BFA18F;
     font-size: 1rem;
     width: 200px;
