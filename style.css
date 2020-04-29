@@ -546,12 +546,11 @@ input[type=submit]:hover {
 .magazine-main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-top: 50px;
-    padding: 50px;
+    margin-top: 100px;
 }
 
 .magazine-item{
-    margin: 10px;
+    margin: 25px;
 }
 
 .magazine-item img{
@@ -567,7 +566,8 @@ input[type=submit]:hover {
 
 
 button{
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background: #BFA18F;
     font-size: 1rem;
     width: 200px;
