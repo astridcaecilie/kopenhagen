@@ -23,12 +23,12 @@ function handleData(handled) {
     var artistNames = [];
     var categoryIds = [];
     //console.log("handled");
-    //console.log(handled);
+    //    console.log(handled);
     //console.log(handled._embedded["wp:term"][0]);
     handled.forEach(item => {
         var allCategories = item._embedded["wp:term"][0];
-//                console.log("item");
-//                console.log(item);
+        //                console.log("item");
+        //                console.log(item);
 
         //check if there is a tag
         if (item._embedded["wp:term"][1] == false) {
@@ -49,28 +49,65 @@ function handleData(handled) {
             categoryIds.push(catId);
         });
 
-        categoryIds.forEach(catId => {
-            var catIdLink = fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/" + catId)
-            .then(res => res.json())
-
-
-            console.log(catIdLink)
-        });
+        //        categoryIds.forEach(testCategoryData);
 
 
     });
-
+    categoryIds.forEach(myFunction);
 
     artistNames.sort();
-    artistNames.forEach(showTagData)
+    artistNames.forEach(showTagData);
 }
+
+//fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories")
+//    .then(res => res.json())
+//    .then(handleCategoryData)
+//
+//
+//function handleCategoryData(catHandled) {
+//    catHandled.forEach(testCategoryData);
+//    console.log("catHandled")
+//    console.log(catHandled)
+//}
+//
+//function testCategoryData(categories) {
+//    console.log("categories")
+//    console.log(categories)
+//
+//}
+function myFunction(categories) {
+    fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/" + categories)
+        .then(res => res.json())
+        .then(showLocationCategories)
+}
+function showLocationCategories (locationCat){
+//    console.log(locationCat)
+    if (locationCat.parent == 11) {
+//        console.log("Location!");
+        var location = locationCat.name;
+
+    var locationLi = document.createElement("li");
+    locationLi.textContent = location;
+
+    console.log(locationLi)
+    var regionsDiv = document.querySelector(".regionsFetched #" + location);
+
+        regionsDiv.appendChild(locationLi);
+
+        const h2 = document.querySelector(".regions");
+
+        if (regionsDiv > locationLi) {
+            regionsDiv.classList.remove("hide");
+        }
+}
+    }
 
 function showTagData(artistNameData) {
     //    console.log("artistNameData");
     //    console.log(artistNameData);
 
-    var li = document.createElement("li");
-    li.textContent = artistNameData;
+    var artistLi = document.createElement("li");
+    artistLi.textContent = artistNameData;
 
     if (artistNameData) {
         const firstLetter = artistNameData.charAt(0);
@@ -79,11 +116,11 @@ function showTagData(artistNameData) {
         //  console.log(".artistsFetched #" + firstLetter);
         var elem = document.querySelector(".artistsFetched #" + firstLetter);
 
-        elem.appendChild(li);
+        elem.appendChild(artistLi);
 
         const h2 = document.querySelector(".LetterH2");
 
-        if (elem > li) {
+        if (elem > artistLi) {
             elem.classList.remove("hide");
         }
 
