@@ -3,7 +3,7 @@ const menuIcon = document.querySelector('.burgerMenu');
 const navbar = document.querySelector('.navbar')
 
 menuIcon.addEventListener('click', () => {
-  navbar.classList.toggle("change");
+    navbar.classList.toggle("change");
 }) //burger menu toggles to and from X
 
 //const magazineLink = "https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/magazine?_embed";
@@ -17,29 +17,53 @@ fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event" + "?_
     .then(handleEventData)
 
 function handleEventData(handled) {
-    const artistName2 = handled._embedded["wp:term"][1][0].name;
+    //    console.log("handle data");
+        console.log(handled);
+    //handled.forEach(showTagData2)
+    //console.log(handled);
+    var artistNames = [];
+
+    handled.forEach(item => {
+        if (item._embedded["wp:term"][1] == false){
+            console.log("No Tag")
+        } else {
+            console.log("Has a Tag")
+            var names = item._embedded["wp:term"][1][0].name;
+        }
+//                console.log("names " + names);
+        artistNames.push(names);
+    });
+    artistNames.sort();
+    console.log("artistNames");
+    console.log(artistNames);
+
+    //  artistNames.forEach(showTagData2);
+    //  const artistNameDisplay = document.createElement("li");
+    //  const firstLetter = artistName.charAt(0);
+    //  artistNameDisplay.classList.add(firstLetter);
     handled.forEach(showEventData)
 }
 
 function showEventData(EventData) {
+
     //    console.log("show EventData");
     //    console.log(EventData);
 
-//    const artistName2 = EventData._embedded["wp:term"][1][0].name;
-//    console.log("artist name");
-//    console.log(EventData._embedded["wp:term"][1][0].name);
+    //    const artistName2 = EventData._embedded["wp:term"][1][0].name;
+    //    console.log("artist name");
+    //    console.log(EventData._embedded["wp:term"][1][0].name);
 
-//    if (eventId) {
-//        //single bike
-//
+    //    if (eventId) {
+    //        //single bike
+    //
 
     //fetch("http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event/" + eventId + "?_embed")
-//            .then(res => res.json())
-//            .then(getInfoById)
-//    }
+    //            .then(res => res.json())
+    //            .then(getInfoById)
+    //    }
 }
 //
-//fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?per_page=10")
+//fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?per_page=100")
 //  .then(res => res.json())
 //  .then(handleTagData)
 //
