@@ -17,47 +17,68 @@ fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags")
     .then(handleTagData)
 
 function handleTagData(handled) {
-    console.log("handle data");
-    console.log(handled);
-    handled.forEach(showTagData)
+    //    console.log("handle data");
+    //    console.log(handled);
+    handled.forEach(showTagData2)
+}
+var artistNames = [];
+
+function showTagData2 (data){
+    artistNames.push(data.name);
+    console.log(artistNames);
 }
 
 function showTagData(tagData) {
 
     const artistName = tagData.name; // Here I get each artists name
-    const artistTagId = tagData.id; // Here I get each artist tag id
-    console.log("artistTagId");
-    console.log(artistTagId);
+//    const artistTagId = tagData.id; // Here I get each artist tag id
 
     const artistNameDisplay = document.createElement("li"); //I create <li>
-    artistNameDisplay.classList.add("artistNameDisplay"); //add a class to the <li> so it becomes <li class="artistNameDisplay">
+//    artistNameDisplay.classList.add("artistNameDisplay"); //add a class to the <li> so it becomes <li class="artistNameDisplay">
 
     artistNameDisplay.textContent = artistName; //make the li include the names
-
 
     //Getting the fist letter of each name and make it a class on the element
     const firstLetter = artistName.charAt(0);
     artistNameDisplay.classList.add(firstLetter);
 
-    const h2FirstLetter = document.createElement("h2")
-//    h2FirstLetter.classList.add(firstLetter);
-    console.log(h2FirstLetter.classList)
-    //    h2FirstLetter.textContent = firstLetter;
+    console.log(artistNameDisplay);
+
+
+
+
+
+
+//    sort();
+
 
     //Prófa að gera if statement í stað ^ svo það vonandi endurtaki sig ekki
-document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
+    //    document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
+    //        document.querySelector(".letterDiv").appendChild(h2);
+    //        document.querySelector(h2).appendChild(artistNameDisplay);
+//    document.querySelector(".letterDiv").appendChild(artistNameDisplay);
 
-    if (firstLetter == h2FirstLetter.classList) {
-        document.querySelector(".artistsFetched").appendChild(artistNameDisplay);
-    } else {
-        h2FirstLetter.textContent = firstLetter;
-        document.querySelector(".artistsFetched").appendChild(artistNameDisplay);
-    }
+
+    //    const h2 = document.createElement("h2");
+    //    h2.classList.add(firstLetter);
+
+    //    if (artistNameDisplay.classList == h2FirstLetter.classList) {
+    //        console.log("is working");
+    //        document.querySelector(".artistsFetched div").appendChild(artistNameDisplay);
+    //        document.querySelector(".artistsFetched div").appendChild(h2);
+    //
+    //    } else {
+    //
+    //        h2.textContent = firstLetter;
+    //        document.querySelector(".artistsFetched div").appendChild(h2);
+    //        document.querySelector(".artistsFetched div").appendChild(artistNameDisplay);
+    //        console.log("this is working")
+    //    }
     //
 
 
     //    document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
-    document.querySelector(".artistsFetched").appendChild(artistNameDisplay); //Get the <ul class="artistsFetched"> that alredy excists in the html and put in the new li's
+//    document.querySelector(".artistsFetched div").appendChild(artistNameDisplay); //Get the <ul class="artistsFetched"> that alredy excists in the html and put in the new li's
 
 
     // https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories?parent=23&orderby=count&order=desc
@@ -72,10 +93,35 @@ document.querySelector(".artistsFetched").appendChild(h2FirstLetter);
     // get tag name
     // get category if .parent == 23 get name
     //
-    //
+
     //
 
+//    function sort(sorted) {
+//        var h2FirstLetter = document.createElement("div");
+//        //        h2FirstLetter.classList.add("letterDiv");
+//        h2FirstLetter.classList.add(firstLetter);
+//        const h2 = document.createElement("h2");
+//        h2.textContent = firstLetter;
+//        h2.classList.add(firstLetter);
+//
+//
+//        if (artistNameDisplay.classList == h2FirstLetter.classList) {
+//            console.log("is working");
+//            document.querySelector(".artistsFetched div").appendChild(artistNameDisplay);
+//            document.querySelector(".artistsFetched div").appendChild(h2);
+//
+//        } else {
+//
+//            h2.textContent = firstLetter;
+//            document.querySelector(".artistsFetched div").appendChild(h2);
+//            document.querySelector(".artistsFetched div").appendChild(artistNameDisplay);
+//            console.log("this is working")
+//        }
+//    }
+
 }
+
+
 
 
 // burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
