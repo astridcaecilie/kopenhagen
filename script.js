@@ -12,7 +12,7 @@ menuIcon.addEventListener('click', () => {
 
 //fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?per_page=100")
 
-fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?per_page=10")
+fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?per_page=100")
   .then(res => res.json())
   .then(handleTagData)
 
