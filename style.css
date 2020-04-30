@@ -524,9 +524,11 @@ input[type=submit]:hover {
 }
 
 .events h3{
-    margin-left: 10px;
+    margin-left: 50px;
     text-align: end;
-    padding-right: 5px;
+    padding-right: 8px;
+    font-size: 15px
+
 }
 
 .events h4{
@@ -543,10 +545,59 @@ input[type=submit]:hover {
     padding-right: 8px;
 }
 
+.vertical-txt{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-right: 180px;
+    padding-top: 80px;
+    position: absolute;
+}
+
+.vertical-txt2{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-right: 180px;
+    padding-top: 179px;
+    position: absolute;
+}
+
+.vertical-txt3{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-right: 180px;
+    padding-top: 60px;
+    position: absolute;
+}
+
+.vertical-txt4{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-right: 180px;
+    padding-top: 150px;
+    position: absolute;
+}
+
+.vertical-txt5{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-right: 180px;
+    padding-top: 140px;
+    position: absolute;
+}
+
+.vertical-txt6{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-right: 180px;
+    padding-top: 160px;
+    position: absolute;
+}
+
 .magazine-main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: 100px;
+    margin-right: 20px;
 }
 
 .magazine-item{
@@ -563,8 +614,6 @@ input[type=submit]:hover {
     padding: 10px;
     font-size: 12px;
 }
-
-
 
 button{
     margin-top: 20px;
