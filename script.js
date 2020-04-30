@@ -17,7 +17,7 @@ fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event" + "?_
     .then(handleEventData)
 
 function handleEventData(handled) {
-    //    console.log("handle data");
+        console.log("handled");
         console.log(handled);
     //handled.forEach(showTagData2)
     //console.log(handled);
@@ -25,42 +25,47 @@ function handleEventData(handled) {
 
     handled.forEach(item => {
         if (item._embedded["wp:term"][1] == false){
-            console.log("No Tag")
+//            console.log("No Tag")
         } else {
-            console.log("Has a Tag")
+//            console.log("Has a Tag")
             var names = item._embedded["wp:term"][1][0].name;
         }
 //                console.log("names " + names);
         artistNames.push(names);
     });
     artistNames.sort();
-    console.log("artistNames");
-    console.log(artistNames);
+//    console.log("artistNames");
+//    console.log(artistNames);
 
     //  artistNames.forEach(showTagData2);
     //  const artistNameDisplay = document.createElement("li");
-    //  const firstLetter = artistName.charAt(0);
+    //  const firstLetter = artistNameData.charAt(0);
     //  artistNameDisplay.classList.add(firstLetter);
-    handled.forEach(showEventData)
+    handled.forEach(showTagData)
 }
 
-function showEventData(EventData) {
+function showTagData(artistNameData) {
+  console.log("artistNameData");
+  console.log(artistNameData);
 
-    //    console.log("show EventData");
-    //    console.log(EventData);
+// const li = document.createElement("li");
+//  li.textContent = artistNameData;
+//  const firstLetter = artistNameData.charAt(0);
 
-    //    const artistName2 = EventData._embedded["wp:term"][1][0].name;
-    //    console.log("artist name");
-    //    console.log(EventData._embedded["wp:term"][1][0].name);
+  //artistNameDisplay.classList.add(firstLetter);
 
-    //    if (eventId) {
-    //        //single bike
-    //
+//  console.log(artistNameData);
+//  console.log(".artistsFetched #" + firstLetter);
+//  const elem = document.querySelector(".artistsFetched #" + firstLetter);
+//
+//  elem.appendChild(li);
+//
+//    const h2 = document.querySelector(".LetterH2");
+//
+//    if (elem > li) {
+//        elem.classList.remove("hide");
+//    }
 
-    //fetch("http://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event/" + eventId + "?_embed")
-    //            .then(res => res.json())
-    //            .then(getInfoById)
-    //    }
 }
 //
 //fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/tags?per_page=100")
@@ -81,17 +86,17 @@ function showEventData(EventData) {
 //  console.log(artistNames);
 //  artistNames.forEach(showTagData2);
 //  //  const artistNameDisplay = document.createElement("li");
-//  //  const firstLetter = artistName.charAt(0);
+//  //  const firstLetter = artistNameData.charAt(0);
 //  //  artistNameDisplay.classList.add(firstLetter);
 //}
 //
-//function showTagData2(artistName) {
+//function showTagData2(artistNameData) {
 //  const li = document.createElement("li");
-//  li.textContent = artistName;
-//  const firstLetter = artistName.charAt(0);
+//  li.textContent = artistNameData;
+//  const firstLetter = artistNameData.charAt(0);
 //  //artistNameDisplay.classList.add(firstLetter);
 //
-//  console.log(artistName);
+//  console.log(artistNameData);
 //  console.log(".artistsFetched #" + firstLetter);
 //  const elem = document.querySelector(".artistsFetched #" + firstLetter);
 //
