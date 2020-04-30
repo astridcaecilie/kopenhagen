@@ -625,6 +625,11 @@ button{
     font-family: "raleway", sans-serif;
 }
 
+.center-btn{
+    text-align: center;
+    padding: 50px;
+}
+
   .magazine-main{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
