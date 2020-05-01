@@ -274,6 +274,14 @@ time {
 
 /*Calendar styling finished*/
 
+/*Ads styling*/
+
+.ads-img {
+    width: 20vw;
+    margin: 5px 0;
+
+}
+
 @media only screen and (max-width:950px) {
     /*the size is just a random guess, need to change when we find the correct one*/
 
@@ -350,7 +358,9 @@ time {
     }
 
     /* burger menu finished*/
-
+    .ads-img {
+    margin: 10px 0;
+    }
 
 }
 
@@ -395,6 +405,10 @@ time {
         margin-left: 10%;
     }
 
+    .ads-img {
+    width: 150px;
+    margin: 5px 0;
+    }
 
 }
 
