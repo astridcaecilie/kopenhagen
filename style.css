@@ -178,6 +178,102 @@ footer {
     grid-column: 1/4;
 }
 
+/*Calendar styling*/
+
+.calendar {
+    width: 260px;
+    text-align: center;
+    margin-bottom: 205px;
+    margin-right: 25px;
+}
+
+.day-of-week,
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 16px;
+    height: 10px;
+    width: 10px;
+    margin-top: 5px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.date-grid button:first-child {
+    grid-column: 5;
+}
+
+.day {
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.date-grid {
+    margin-top: 15px;
+    grid-gap: 3px;
+}
+
+.calendar-btn {
+    border: none;
+    background: transparent;
+    height: 10px;
+    width: 10px;
+    margin: 10px 10px;
+}
+
+.calendar-btn :hover {
+    background-color: black;
+    color: white;
+}
+
+.calendar-btn :active {
+    background-color: black;
+    color: white;
+}
+
+.month {
+    display: flex;
+    text-align: center;
+}
+
+time {
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+
+}
+
+.month {
+    display: inline-block;
+    padding: -1px 120px;;
+}
+
+.month p {
+   display:inline-block;
+    width: 200px;
+}
+
+.arrow1 {
+    display: inline;
+    padding-right: 50px;
+}
+
+.arrow2 {
+    display: inline;
+    padding-left: 45px;
+}
+
+/*Calendar styling finished*/
+
+/*Ads styling*/
+
+.ads-img {
+    width: 20vw;
+    margin: 5px 0;
+
+}
 
 @media only screen and (max-width:950px) {
     /*the size is just a random guess, need to change when we find the correct one*/
@@ -255,7 +351,9 @@ footer {
     }
 
     /* burger menu finished*/
-
+    .ads-img {
+    margin: 10px 0;
+    }
 
 }
 
@@ -296,19 +394,26 @@ footer {
         text-align: center;
     }
 
+    .calendar {
+        margin-left: 10%;
+    }
+
+    .ads-img {
+    width: 150px;
+    margin: 5px 0;
+    }
 
 }
 
 /* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 */
-<<<<<<< HEAD
-=======
+
 
 /*
 STYLING FOR CAROUSEL
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet" > * {
-=======
+
 
 */
 

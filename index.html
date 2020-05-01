@@ -1,276 +1,353 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <head>
 
-<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kopenhagen</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kopenhagen</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+    <body>
 
 
-    <header>
-        <figure class="logo">
-            <img class="logo" src="logo/logo.png" alt="kopenhagen logo">
-        </figure>
-        <h4 class="tagline">See what's new in the art world</h4>
+        <header>
+            <figure class="logo">
+                <img class="logo" src="logo/logo.png" alt="kopenhagen logo">
+            </figure>
+            <h4 class="tagline">See what's new in the art world</h4>
 
-        <nav class="navbar">
+            <nav class="navbar">
 
-            <div class="burgerMenu">
-                <!--                   these are the lines-->
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-            <ul class="navList">
-                <li class="navItem"> <a href="index.html" class="navLink">Home</a></li>
+                <div class="burgerMenu">
+                    <!--                   these are the lines-->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <ul class="navList">
+                    <li class="navItem"> <a href="index.html" class="navLink">Home</a></li>
 
-                <li class="navItem"> <a href="pages/art-calendar.html" class="navLink">Art Calendar</a></li>
+                    <li class="navItem"> <a href="pages/art-calendar.html" class="navLink">Art Calendar</a></li>
 
-                <li class="navItem"> <a href="pages/magasin.html" class="navLink">Magazine</a></li>
+                    <li class="navItem"> <a href="pages/magasin.html" class="navLink">Magazine</a></li>
 
-                <li class="navItem"> <a href="pages/artists.html" class="navLink">Artists</a></li>
+                    <li class="navItem"> <a href="pages/artists.html" class="navLink">Artists</a></li>
 
-                <li class="navItem"> <a href="pages/institutions.html" class="navLink">Institutions</a></li>
+                    <li class="navItem"> <a href="pages/institutions.html" class="navLink">Institutions</a></li>
 
-                <li class="navItem"> <a href="pages/about-kopenhagen.html" class="navLink">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+                    <li class="navItem"> <a href="pages/about-kopenhagen.html" class="navLink">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <aside class="slides">
-        <!--only for the slides-->
-        <!--   IMAGE CAROUSEL-->
-    <!--slideshow container-->
-    <div class="slideshow-container">
+        <aside class="slides">
+            <!--only for the slides-->
+            <!--   IMAGE CAROUSEL-->
+            <!--slideshow container-->
+            <div class="slideshow-container">
 
-        <!--    Full with images  and caption text-->
+                <!--    Full with images  and caption text-->
 
-        <div class="mySlides fade">
-            <img class="image-crop" src="images-carousel/slide-1.jpg" alt="">
-            <div class="caption-text">Landskabninger - interview Nana Franscisca Schottländer</div>
-        </div>
+                <div class="mySlides fade">
+                    <img class="image-crop" src="images-carousel/slide-1.jpg" alt="">
+                    <div class="caption-text">Landskabninger - interview Nana Franscisca Schottländer</div>
+                </div>
 
-        <div class="mySlides fade">
-            <img class="image-crop" src="images-carousel/slide-2.jpg" alt="">
-            <div class="caption-text">Kunst som en bevidsthedsudvidende selvbiografi</div>
-        </div>
+                <div class="mySlides fade">
+                    <img class="image-crop" src="images-carousel/slide-2.jpg" alt="">
+                    <div class="caption-text">Kunst som en bevidsthedsudvidende selvbiografi</div>
+                </div>
 
-        <div class="mySlides fade">
-            <img class="image-crop" src="images-carousel/slide-3.jpg" alt="">
-            <div class="caption-text">Hammershøi i nye klæder</div>
-        </div>
+                <div class="mySlides fade">
+                    <img class="image-crop" src="images-carousel/slide-3.jpg" alt="">
+                    <div class="caption-text">Hammershøi i nye klæder</div>
+                </div>
 
-        <!--        Next and Previous Buttons-->
-        <div class="next">
-            <i class="right" onclick="plusSlides(1)"></i>
-        </div>
-        <div class="prev">
-        <i class="left" onclick="plusSlides(-1)"></i>
-        </div>
-        <!--
+                <!--        Next and Previous Buttons-->
+                <div class="next">
+                    <i class="right" onclick="plusSlides(1)"></i>
+                </div>
+                <div class="prev">
+                    <i class="left" onclick="plusSlides(-1)"></i>
+                </div>
+                <!--
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 -->
 
-        <!-- The lines -->
-        <div style="text-align:center">
-            <span class="line" onclick="currentSlide(1)"></span>
-            <span class="line" onclick="currentSlide(2)"></span>
-            <span class="line" onclick="currentSlide(3)"></span>
-        </div>
+                <!-- The lines -->
+                <div style="text-align:center">
+                    <span class="line" onclick="currentSlide(1)"></span>
+                    <span class="line" onclick="currentSlide(2)"></span>
+                    <span class="line" onclick="currentSlide(3)"></span>
+                </div>
 
-    </div>
-    <!--   /IMAGE CAROUSEL -->
-        <!--delete-->
-    </aside>
-
-
-    <main>
-
-           <h1>Happening Now</h1>
-           <div class="border-main"></div>
-
-           <div class="events">
-            <article class="event-item">
-              <img src="antiterror.jpg" alt="The Anti Terror Album">
-                <p class="vertical-txt">Museet for samtidskunst</p>
-               <h3>The Anti-Terror Album</h3>
-               <p>Peter Voss-Knude</p>
-               <h4>23. April - 6. May</h4>
-
-           </article>
-
-           <article class="event-item">
-              <img src="louisiana_on_paper.png" alt="Lousiana on Paper">
-               <p class="vertical-txt2">Louisiana</p>
-               <h3>Lousiana on Paper</h3>
-               <p>Nancy Spero</p>
-               <h4>3. Feb - 30. April</h4>
-           </article>
-
-           <article class="event-item">
-              <img src="larissa_sansour.png" alt="Heirloom">
-               <p class="vertical-txt3">Copenhagen Contemporary</p>
-               <h3>Heirloom</h3>
-               <p>Larissa Sansour</p>
-               <h4>23. April - 6. May</h4>
-           </article>
-
-           <article class="event-item">
-              <img src="vandrehallen.png" alt="Vandrehallen">
-              <p class="vertical-txt4">Vandrehallen</p>
-               <h3>Op planterne kravler mod toppen</h3>
-               <p>Mo Maja Moesgaard</p>
-               <h4>23. April - 0.6 May</h4>
-           </article>
-
-           <article class="event-item">
-              <img src="sor%C3%B8.png" alt="The Unseen Room">
-              <p class="vertical-txt5">Sorø Kunstmuseum</p>
-               <h3>The Unseen Room</h3>
-               <p>Krass Clement</p>
-               <h4>29. Feb - 25. May</h4>
-           </article>
-
-           <article class="event-item">
-              <img src="event_horizon.png" alt="Event Horizon">
-              <p class="vertical-txt6">Cisternerne</p>
-               <h3>Event Horizon</h3>
-               <p>Tomás Saraceno</p>
-               <h4>15. March - 29. Nov</h4>
-           </article>
-
-        </div>
-
-         <div class="center-btn">
-           <button>See more events</button>
-           </div>
+            </div>
+            <!--   /IMAGE CAROUSEL -->
+            <!--delete-->
+        </aside>
 
 
-                <h1>Magazine</h1>
-           <div class="border-main"></div>
+        <main>
 
-           <div class="magazine-main">
-               <article class="magazine-item">
-                   <img src="nana.png" alt="Nana Schottländer">
-                   <p class="magazine-text">Landskabninger - interview with Nana Franscisca Schottländer</p>
-               </article>
+            <h1>Happening Now</h1>
+            <div class="border-main"></div>
 
-               <article class="magazine-item">
-                   <img src="jakobsteen.png" alt="Jakob Steen">
-                   <p class="magazine-text">Kunst som en bevidsthedsudvidende selvbiografi</p>
-               </article>
+            <div class="events">
+                <article class="event-item">
+                    <img src="antiterror.jpg" alt="The Anti Terror Album">
+                    <p class="vertical-txt">Museet for samtidskunst</p>
+                    <h3>The Anti-Terror Album</h3>
+                    <p>Peter Voss-Knude</p>
+                    <h4>23. April - 6. May</h4>
 
-               <article class="magazine-item">
-                   <img src="nyt_galleri_norrebro.png" alt="Nyt galleri Nørrebro">
-                   <p class="magazine-text">Nyt Nørrebro-galleri inviterer ind til et intimt møde med kunsten i fællesskabets ånd</p>
-               </article>
+                </article>
 
-               <article class="magazine-item">
-                   <img src="arvida_bystrom.png" alt="Arviida Byström">
-                   <p class="magazine-text">On the Cloud - interview with Arvida Byström</p>
-               </article>
+                <article class="event-item">
+                    <img src="louisiana_on_paper.png" alt="Lousiana on Paper">
+                    <p class="vertical-txt2">Louisiana</p>
+                    <h3>Lousiana on Paper</h3>
+                    <p>Nancy Spero</p>
+                    <h4>3. Feb - 30. April</h4>
+                </article>
 
-                <article class="magazine-item">
-                   <img src="disturbed_reflections.png" alt="Disturbed Refelctions">
-                   <p class="magazine-text">Disturbed Reflections, Carlsberg Byens Galleri og Kunstsalon</p>
-               </article>
+                <article class="event-item">
+                    <img src="larissa_sansour.png" alt="Heirloom">
+                    <p class="vertical-txt3">Copenhagen Contemporary</p>
+                    <h3>Heirloom</h3>
+                    <p>Larissa Sansour</p>
+                    <h4>23. April - 6. May</h4>
+                </article>
 
-                <article class="magazine-item">
-                   <img src="ojeblikkens_situationer.png" alt="Øjeblikkens Situationer">
-                   <p class="magazine-text">Øjeblikkenes situationer - Jesper Just på Charlottenborg</p>
-               </article>
-           </div>
+                <article class="event-item">
+                    <img src="vandrehallen.png" alt="Vandrehallen">
+                    <p class="vertical-txt4">Vandrehallen</p>
+                    <h3>Op planterne kravler mod toppen</h3>
+                    <p>Mo Maja Moesgaard</p>
+                    <h4>23. April - 0.6 May</h4>
+                </article>
 
-                <div class="center-btn">
-               <button>See more articles</button>
-               </div>
+                <article class="event-item">
+                    <img src="sor%C3%B8.png" alt="The Unseen Room">
+                    <p class="vertical-txt5">Sorø Kunstmuseum</p>
+                    <h3>The Unseen Room</h3>
+                    <p>Krass Clement</p>
+                    <h4>29. Feb - 25. May</h4>
+                </article>
 
-    </main>
+                <article class="event-item">
+                    <img src="event_horizon.png" alt="Event Horizon">
+                    <p class="vertical-txt6">Cisternerne</p>
+                    <h3>Event Horizon</h3>
+                    <p>Tomás Saraceno</p>
+                    <h4>15. March - 29. Nov</h4>
+                </article>
 
-
-    <aside class="ads">
-        <!--for the ads and newsletter-->
-        <h2>ads and newsletter</h2>
-        <form action="action_page">
-            <div class="newsletter-container">
-                <p>Subscribe to our newsletter</p>
             </div>
 
-            <div class="newsletter-container" style="background-color: white">
-                <input type="text" placeholder="Name" name="name" required>
-                <input type="text" placeholder="Email Address" name="mail" required>
-<!--
+            <div class="center-btn">
+                <button>See more events</button>
+            </div>
+
+
+            <h1>Magazine</h1>
+            <div class="border-main"></div>
+
+            <div class="magazine-main">
+                <article class="magazine-item">
+                    <img src="nana.png" alt="Nana Schottländer">
+                    <p class="magazine-text">Landskabninger - interview with Nana Franscisca Schottländer</p>
+                </article>
+
+                <article class="magazine-item">
+                    <img src="jakobsteen.png" alt="Jakob Steen">
+                    <p class="magazine-text">Kunst som en bevidsthedsudvidende selvbiografi</p>
+                </article>
+
+                <article class="magazine-item">
+                    <img src="nyt_galleri_norrebro.png" alt="Nyt galleri Nørrebro">
+                    <p class="magazine-text">Nyt Nørrebro-galleri inviterer ind til et intimt møde med kunsten i fællesskabets ånd</p>
+                </article>
+
+                <article class="magazine-item">
+                    <img src="arvida_bystrom.png" alt="Arviida Byström">
+                    <p class="magazine-text">On the Cloud - interview with Arvida Byström</p>
+                </article>
+
+                <article class="magazine-item">
+                    <img src="disturbed_reflections.png" alt="Disturbed Refelctions">
+                    <p class="magazine-text">Disturbed Reflections, Carlsberg Byens Galleri og Kunstsalon</p>
+                </article>
+
+                <article class="magazine-item">
+                    <img src="ojeblikkens_situationer.png" alt="Øjeblikkens Situationer">
+                    <p class="magazine-text">Øjeblikkenes situationer - Jesper Just på Charlottenborg</p>
+                </article>
+            </div>
+
+            <div class="center-btn">
+                <button>See more articles</button>
+            </div>
+
+        </main>
+
+
+        <aside class="ads">
+            <!--for the ads and newsletter-->
+
+
+            <div class="calendar">
+                <div class="month">
+                    <p><span class="arrow1">&#x27e8</span> May <span class="arrow2">&#x27e9</span></p>
+                </div>
+                <div class="day-of-week">
+                    <div class="day">Mo</div>
+                    <div class="day">Tu</div>
+                    <div class="day">We</div>
+                    <div class="day">Th</div>
+                    <div class="day">Fr</div>
+                    <div class="day">Sa</div>
+                    <div class="day">Su</div>
+                </div>
+                <div class="date-grid">
+                    <button class="calendar-btn"><time datetime="2020-05-01">1</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-02">2</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-03">3</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-04">4</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-05">5</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-06">6</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-07">7</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-08">8</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-09">9</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-10">10</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-11">11</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-12">12</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-13">13</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-14">14</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-15">15</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-16">16</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-17">17</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-18">18</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-19">19</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-20">20</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-21">21</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-22">22</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-23">23</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-24">24</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-25">25</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-26">26</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-27">27</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-28">28</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-29">29</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-30">30</time></button>
+                    <button class="calendar-btn"><time datetime="2020-05-31">31</time></button>
+
+                </div>
+                <!--        <img class ="calendar-marker" src="images/calendar-marker-02.svg" alt="marker">-->
+            </div>
+
+            <form action="action_page">
+                <div class="newsletter-container">
+                    <p>Subscribe to our newsletter</p>
+                </div>
+
+                <div class="newsletter-container" style="background-color: white">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="text" placeholder="Email Address" name="mail" required>
+                    <!--
                 <label>
                     <input type="checkbox" checked="checked" name="subscribe"> Yes! I want to recieve emails from Kopenhagen
                 </label>
 -->
+                </div>
+
+                <div class="newsletter-container">
+                    <input type="submit" value="Subscribe">
+                </div>
+
+            </form>
+            <div>
+                <img class="ads-img" src="images/kunsthojskolen-aeroe.png" alt="Reklame for Kunsthøjskolen på Ærø">
+                <img class="ads-img" src="images/kobenhavns-kunstskole.png" alt="Reklame for Københavns Kunstskole">
+                <img class="ads-img" src="images/krabbesholm.png" alt="Reklame for Krabbesholm højskole">
+                <img class="ads-img" src="images/kunsthojskolen-holbaek.png" alt="Reklame for Kunsthøjskolen i Holbæk">
+                <img class="ads-img" src="images/kunstskolen-spektrum.png" alt="Reklame for Kunstskolen Spektrum">
+                <img class="ads-img" src="images/performance-studio-ong.png" alt="Reklame for Lilith Performance Studio">
+
+            </div>
+        </aside>
+
+
+        <footer>
+            <div class="footer">
+                <div class="inner-footer">
+                    <div class="footer-items">
+                        <h3>Kopenhagen Art Magasin</h3>
+                        <p>Kopenhagen.dk har modtaget Danske Kunstkritikeres Pris for 2005 og Københavnrprisen 2004. Kopenhagen.dk er omtalt rferenceværket NYBRUD - dansk kunst i 1990'erne, Aschehoug, 2006</p>
+                    </div>
+
+                    <div class="footer-items">
+                        <h3>Links</h3>
+                        <div class="border"></div>
+                        <ul>
+                            <a href="pages/index.html">
+                                <li>Home</li>
+                            </a>
+                            <a href="pages/art-calendar.html">
+                                <li>Art Calendar</li>
+                            </a>
+                            <a href="">
+                                <li>Magazine</li>
+                            </a>
+                            <a href="pages/artists.html">
+                                <li>Artists</li>
+                            </a>
+                            <a href="pages/institutions.html">
+                                <li>Institutions</li>
+                            </a>
+                            <a href="pages/about-kopenhagen.html">
+                                <li>About Us</li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="footer-items">
+                        <h3>Social Media</h3>
+                        <div class="border"></div>
+                        <img class="facebook" src="iconmonstr-facebook-3-240.png">
+                        <img class="insta" src="iconmonstr-instagram-13-240.png">
+                        <img class="twitter" src="iconmonstr-twitter-3-240.png">
+                    </div>
+
+                    <div class="footer-items">
+                        <h3>Contact us</h3>
+                        <div class="border"></div>
+                        <ul>
+                            <li>Istedgade 75, 1650 København V</li>
+                            <li></li>
+                            <li>kopenhagen@kopenhagen.dk</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="newsletter-container">
-                <input type="submit" value="Subscribe">
-            </div>
-
-        </form>
-        <!--delete-->
-    </aside>
+        </footer>
 
 
-    <footer>
-      <div class="footer">
-          <div class="inner-footer">
-              <div class="footer-items">
-                  <h3>Kopenhagen Art Magasin</h3>
-                  <p>Kopenhagen.dk har modtaget Danske Kunstkritikeres Pris for 2005 og Københavnrprisen 2004. Kopenhagen.dk er omtalt  rferenceværket NYBRUD - dansk kunst i 1990'erne, Aschehoug, 2006</p>
-              </div>
-
-              <div class="footer-items">
-                  <h3>Links</h3>
-                  <div class="border"></div>
-                  <ul>
-                      <a href="pages/index.html"><li>Home</li></a>
-                      <a href="pages/art-calendar.html"><li>Art Calendar</li></a>
-                      <a href=""><li>Magazine</li></a>
-                      <a href="pages/artists.html"><li>Artists</li></a>
-                      <a href="pages/institutions.html"><li>Institutions</li></a>
-                      <a href="pages/about-kopenhagen.html"><li>About Us</li></a>
-                  </ul>
-              </div>
-
-              <div class="footer-items">
-                 <h3>Social Media</h3>
-                  <div class="border"></div>
-                  <img class="facebook" src="iconmonstr-facebook-3-240.png">
-                  <img class="insta" src="iconmonstr-instagram-13-240.png">
-                  <img class="twitter" src="iconmonstr-twitter-3-240.png">
-              </div>
-
-              <div class="footer-items">
-                  <h3>Contact us</h3>
-                  <div class="border"></div>
-                  <ul>
-                      <li>Istedgade 75, 1650 København V</li>
-                      <li></li>
-                      <li>kopenhagen@kopenhagen.dk</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-
-    </footer>
-
-    <script src="script.js"></script>
+            <!--
+burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
+https://www.youtube.com/watch?v=BN6fH1nRDxA
+-->
 
 <!--
 burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 -->
 
-    <script src="script.js"></script>
-</body></html>
+
+<script src="script.js"></script>
+</body>
+
+</html>
