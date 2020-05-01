@@ -22,6 +22,7 @@ fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/magazine" + 
 function handleData(handled) {
     var artistNames = [];
     var categoryIds = [];
+
     //console.log("handled");
     //    console.log(handled);
     //console.log(handled._embedded["wp:term"][0]);
@@ -30,34 +31,184 @@ function handleData(handled) {
         //                console.log("item");
         //                console.log(item);
 
+
+
         //check if there is a tag
         if (item._embedded["wp:term"][1] == false) {
             // No tag
         } else {
             // Yes tag
             var names = item._embedded["wp:term"][1][0].name;
-            //            console.log("names");
-            //            console.log(names);
+            //                        console.log("names");
+            //                        console.log(names);
         }
         artistNames.push(names);
 
         // Since there are multiple categories I needed one more step to get "inside"
         allCategories.forEach(cate => {
             var catId = cate.id;
+            var catName = cate.name;
+
+
 
             //Now I push it outside of this function and create an array from it
+            //            console.log(catId);
             categoryIds.push(catId);
+            //            categoryNames.push(catName);
         });
 
-        //        categoryIds.forEach(testCategoryData);
+
+
+
+        //                categoryIds.forEach(testCategoryData);
 
 
     });
-    categoryIds.forEach(myFunction);
+
+
+    categoryIds.forEach(fetchingCat);
+    categoryIds.forEach(compare);
+    //        console.log(categoryIds)
+
+    //categoryNames.forEach(displayCategoryName)
+
+
 
     artistNames.sort();
     artistNames.forEach(showTagData);
+
+    function fetchingCat(categories) {
+        fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/" + categories)
+            .then(res => res.json())
+            .then(handleCategories)
+    }
+
+    function handleCategories(handledCatData) {
+        var theLocationIds = [];
+        var theLocationNames = [];
+
+        var allCategoryNames = [];
+
+        var theInstitutionIds = [];
+        var theInstitutionNames = [];
+
+
+        //        console.log(handledCatData.name)
+
+        // For the location
+        if (handledCatData.parent == 11) {
+            var locationId = handledCatData.id;
+            var locationName = handledCatData.name;
+            //                    console.log(locationId);
+            //                    console.log(locationName);
+            theLocationIds.push(locationId);
+            theLocationNames.push(locationName);
+            //            console.log(theLocationIds);
+            //            console.log(theLocationNames);
+            var regionsUl = document.querySelector(".regionsFetched #" + theLocationNames);
+
+//             console.log(locationName);
+        }
+
+        //for the Institution name
+        else if (handledCatData.parent == 2) {
+            var institutionId = handledCatData.id;
+            var institutionName = handledCatData.name;
+            //                    console.log(locationId);
+            //                    console.log(locationName);
+            theInstitutionIds.push(institutionId);
+//            theInstitutionNames.push(institutionName);
+            //          console.log(theInstitutionIds);
+            //                        console.log(theInstitutionNames);
+
+            var institutionLi = document.createElement("li");
+            institutionLi.textContent = institutionName;
+            console.log(handledCatData.name);
+        }
+
+//        theInstitutionNames.forEach(showInstitutionName);
+//
+//        function showInstitutionName(institutionNameDisplay) {
+
+
+//        if (theInstitutionNames == 0) {
+////            console.log("no")
+//            } else {
+//               var institutionLi = document.createElement("li");
+//                institutionLi.textContent = theInstitutionNames;
+//
+//
+////                var regionsUl = document.querySelector(".regionsFetched #" + theLocationNames);
+////                regionsUl.appendChild(institutionLi);
+////            console.log("yey")
+//            }
+
+
+                //  console.log(".artistsFetched #" + firstLetter);
+
+
+
+//            console.log(institutionLi)
+//            console.log(theLocationNames)
+
+
+
+//                const regionH2 = document.querySelector(".regions");
+
+//                if (regionsUl > institutionLi) {regionsElem.classList.remove("hide");}
+
+//        }
+
+
+
+
+
+
+
+
+
+        //    handledCatData.forEach(locationCategories);
+        //     console.log(handledCatData)
+    }
+
+    function locationCategories(locationCat) {
+        //        console.log("locationCat")
+        //        console.log(locationCat)
+        //        console.log("categoryIds")
+        //        console.log(categoryIds)
+        //        var theLocationIds = [];
+
+        //        console.log(locationCat.parent == 11)
+        //        if (locationCat.parent !== 11) {
+        //            console.log("no")
+        //
+        //        } else {
+        ////
+        //            console.log("locationCat.id")
+        ////            console.log(locationCat.id)
+        //           var locationCatId = locationCat.id;
+        ////            var stringCatId = locationCatId.toString();
+        ////            console.log(stringCatId)
+        //             theLocationIds.push(locationCatId);
+        //        }
+        //            console.log
+
+        //                    console.log(theLocationIds)
+
+        //theLocationIds.forEach(compare)
+
+        //        var locationId = locationCat.parent == 11;
+        //        console.log(locationId)
+
+    }
+
+    function compare(compared) {
+        //        if (locationId == categoryIds) {
+        //            console.log("yey")
+        //        }
+    }
 }
+
 
 //fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories")
 //    .then(res => res.json())
@@ -75,32 +226,32 @@ function handleData(handled) {
 //    console.log(categories)
 //
 //}
-function myFunction(categories) {
-    fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/" + categories)
-        .then(res => res.json())
-        .then(showLocationCategories)
+
+
+//function fetchingCat (categories) {
+//    fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/" + categories)
+//        .then(res => res.json())
+//        .then(showLocationCategories)
+//}
+//function showLocationCategories (locationCat){
+////    console.log(locationCat)
+//    if (locationCat.parent == 11) {
+////        console.log("Location!");
+//        var locationId = [""];
+//
+//    }
+//locationId.forEach(compareCategories)
+//}
+//
+//function compareCategories (compared){
+//
+//}
+
+if (artists.html == true){
+    console.log("yes")
+} else{
+    console.log("no")
 }
-function showLocationCategories (locationCat){
-//    console.log(locationCat)
-    if (locationCat.parent == 11) {
-//        console.log("Location!");
-        var location = locationCat.name;
-
-    var locationLi = document.createElement("li");
-    locationLi.textContent = location;
-
-    console.log(locationLi)
-    var regionsDiv = document.querySelector(".regionsFetched #" + location);
-
-        regionsDiv.appendChild(locationLi);
-
-        const h2 = document.querySelector(".regions");
-
-        if (regionsDiv > locationLi) {
-            regionsDiv.classList.remove("hide");
-        }
-}
-    }
 
 function showTagData(artistNameData) {
     //    console.log("artistNameData");
