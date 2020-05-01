@@ -178,6 +178,101 @@ footer {
     grid-column: 1/4;
 }
 
+/*Calendar styling*/
+
+.calendar {
+    width: 260px;
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.day-of-week,
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 16px;
+    height: 10px;
+    width: 10px;
+    margin-top: 5px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.date-grid button:first-child {
+    grid-column: 5;
+}
+
+.day {
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.date-grid {
+    margin-top: 15px;
+    grid-gap: 3px;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+button :hover {
+    background-color: black;
+    color: white;
+}
+
+button :active {
+    background-color: black;
+    color: white;
+}
+
+.month {
+    display: flex;
+    text-align: center;
+}
+
+time {
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+}
+
+.calendar-marker{
+    height: 35px;
+    width: auto;
+    z-index: 1;
+/*    margin: 20px 10px;*/
+    position: absolute;
+    left: 86px;
+    top: 117px;
+    opacity: .7;
+
+}
+
+.month {
+    display: inline-block;
+    padding: -1px 120px;;
+}
+
+.month p {
+   display:inline-block;
+    width: 200px;
+}
+
+.arrow1 {
+    display: inline;
+    padding-right: 50px;
+}
+
+.arrow2 {
+    display: inline;
+    padding-left: 45px;
+}
+
+/*Calendar styling finished*/
 
 @media only screen and (max-width:950px) {
     /*the size is just a random guess, need to change when we find the correct one*/
@@ -296,19 +391,22 @@ footer {
         text-align: center;
     }
 
+    .calendar {
+        margin-left: 10%;
+    }
+
 
 }
 
 /* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 */
-<<<<<<< HEAD
-=======
+
 
 /*
 STYLING FOR CAROUSEL
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet" > * {
-=======
+
 
 */
 
