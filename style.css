@@ -355,6 +355,10 @@ time {
     margin: 10px 0;
     }
 
+    .footer-items{
+        width: 44%;
+    }
+
 }
 
 
@@ -401,6 +405,9 @@ time {
     .ads-img {
     width: 150px;
     margin: 5px 0;
+    }
+        .footer-items{
+        width: 100%;
     }
 
 }
@@ -837,19 +844,16 @@ footer img{
 
 /*media queries for footer*/
 
+/*
 @media only screen and (max-width: 1085px){
     .footer-items{
         width: 44%;
     }
 }
+*/
 
 @media only screen and (max-width: 600px){
     .footer-items{
         width: 100%;
     }
 }
-
-
-
-=======
->>>>>>> slideshow
