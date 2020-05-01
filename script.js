@@ -28,8 +28,8 @@ function init() {
             .then(handleArtistNames)
     }
 
-    function handleArtistNames(addArtist) {
-        addArtist.forEach(addArtistNames);
+    function handleArtistNames(artists) {
+        artists.forEach(addArtistNames);
     }
 
     function addArtistNames(artistNames) {
