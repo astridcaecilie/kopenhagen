@@ -146,4 +146,3 @@ function showTagData(artistNameData) {
 // https://www.youtube.com/watch?v=BN6fH1nRDxA ;
 
 //Deleting repeating values in an array https://www.tutorialrepublic.com/faq/how-to-remove-duplicate-values-from-a-javascript-array.php
-
