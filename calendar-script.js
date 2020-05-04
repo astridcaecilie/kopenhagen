@@ -97,8 +97,9 @@ function showEvents(events) {
   //document.querySelector("main").appendChild(copy);
   const sectionAndEventID = events.institution[0];
   //events._embedded["wp:term"][0][1].id;
-  console.log('.inst-' + sectionAndEventID);
+//  console.log('.inst-' + sectionAndEventID);
   const whereToPutIt = document.querySelector('.inst-' + sectionAndEventID);
+    console.log(whereToPutIt)
   whereToPutIt.appendChild(copy);
   //document.querySelector(whereToPutIt).appendChild(copy);
 }

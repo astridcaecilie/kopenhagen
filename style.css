@@ -257,15 +257,17 @@ time {
     padding-left: 3px;
 }
 
+/*
 .calendar-marker {
     height: 35px;
     width: auto;
     z-index: 1;
-    /*    margin: 20px 10px;*/
+        margin: 20px 10px;
     position: absolute;
     left: 25.2vw;
     top: 49.5vh;
     opacity: .7;
+*/
 
 }
 
