@@ -11,10 +11,12 @@ menuIcon.addEventListener('click', () => {
 fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/event" + "?_embed")
     .then(res => res.json())
     .then(handleData)
+    .then(hasTheId)
 //fetching from magazine pods
 fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/magazine" + "?_embed")
     .then(res => res.json())
     .then(handleData)
+    .then(hasTheId)
 
 function handleData(handled) {
     //Create an array and then push the artist names (line31) into the array
@@ -105,7 +107,7 @@ function handleData(handled) {
             institutionLi.textContent = institutionName;
 
             var regionsUl = document.querySelector(".regionsFetched #" + institutionLocation);
-            console.log(regionsUl);
+//            console.log(regionsUl);
 
             regionsUl.appendChild(institutionLi);
 
@@ -142,6 +144,9 @@ function showTagData(artistNameData) {
 }
 
 function hasTheId(theId){
+    console.log("theId")
+    const template = document.querySelector(".templateHasTheID").content;
+    console.log(template)
     const copy = template.cloneNode(true);
 }
 
