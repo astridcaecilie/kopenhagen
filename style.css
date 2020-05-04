@@ -13,8 +13,21 @@
     --beige: #E9D8C0;
 }
 
+
 * {
     box-sizing: border-box
+}
+
+.headerLine {
+    display: inline-flex;
+}
+
+.line {
+    border-bottom: solid .09em var(--black);
+    width: 50vw;
+    height: 42px;
+    margin: 0 0 30px;
+
 }
 
 a {
@@ -49,6 +62,14 @@ body {
 }
 
 /*  HEADER */
+
+main {
+    margin: 20px 170px 20px 70px;
+}
+
+.ads {}
+
+/*  H E A D E R */
 header {
     display: inline-flex;
     /*    padding-top: 10px;*/
@@ -66,6 +87,7 @@ header {
     margin-left: -120px;
     color: var(--darker-grey);
 }
+
 /*  END: HEADER */
 
 
@@ -140,6 +162,7 @@ header {
     padding-bottom: 5px;
     color: var(--brown);
 }
+
 /* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 https://www.youtube.com/watch?v=BN6fH1nRDxA
 */
@@ -184,6 +207,7 @@ footer {
     grid-area: footer;
     grid-column: 1/4;
 }
+
 /*   END: BASIC  G R I D  LAYOUT Anna  */
 
 
@@ -312,6 +336,7 @@ i {
         opacity: 1
     }
 }
+
 /*END: STYLING FOR CAROUSEL*/
 
 
@@ -470,6 +495,7 @@ button {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
+
 /* END: MAIN PAGE*/
 
 /*EMAIL FORM STYLING*/
@@ -518,6 +544,7 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.8;
 }
+
 /*END: EMAIL FORM STYLING*/
 
 
@@ -580,12 +607,14 @@ input[type=submit]:hover {
     text-align: center;
 }
 
+/*
 time {
     padding-top: 1px;
     padding-right: 3px;
     padding-bottom: 2px;
     padding-left: 3px;
 }
+*/
 
 .month {
     display: inline-block;
@@ -609,11 +638,185 @@ time {
 
 /*END: CALENDAR STYLING*/
 
+
+
+/*Calendar styling*/
+
+.calendar {
+    width: 260px;
+    text-align: center;
+}
+
+.day-of-week,
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 16px;
+    height: 10px;
+    width: 10px;
+    margin-top: 5px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.date-grid button:first-child {
+    grid-column: 5;
+}
+
+.day {
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.date-grid {
+    margin-top: 15px;
+    grid-gap: 3px;
+}
+
+.big-date-grid > button {
+    border: none;
+    background: transparent;
+}
+
+.big-date-grid > button :hover {
+    background-color: black;
+    color: white;
+}
+
+.big-date-grid > button :active {
+    background-color: black;
+    color: white;
+}
+
+.month {
+    display: flex;
+    text-align: center;
+}
+
+time {
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+}
+
+/*
+.calendar-marker {
+    height: 35px;
+    width: auto;
+    z-index: 1;
+        margin: 20px 10px;
+    position: absolute;
+    left: 25.2vw;
+    top: 49.5vh;
+    opacity: .7;
+*/
+
+}
+
+.month {
+    display: inline-block;
+    padding: -1px 120px;
+    ;
+}
+
+.month p {
+    display: inline-block;
+    width: 200px;
+}
+
+.arrow1 {
+    display: inline;
+    padding-right: 50px;
+}
+
+.arrow2 {
+    display: inline;
+    padding-left: 45px;
+}
+
+.calendar-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*Calendar styling end*/
+/*Calendar page styling*/
+.big-date-grid button:first-child {
+    grid-column: 5;
+}
+
+.big-day {
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.big-date-grid {
+    margin-top: 15px;
+    grid-gap: 3px;
+}
+
+.big-calendar-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+}
+
+.big-date-grid {
+    /*
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+*/
+}
+
+.big-date-grid > button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    margin: 7px 7px;
+}
+
+.big-day-of-week,
+.big-date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 16px;
+    height: 10px;
+    width: 10px;
+    margin-top: 5px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.big-calendar {
+    width: 200px;
+}
+
+.quick-search {
+/*
+    margin-top: ;
+    margin-left: 100px;
+*/
+}
+
+
+/*Calendar page styling end*/
+
+.h1-calendar-page {
+    padding-top: 150px;
+}
+
 /*ADS STYLING*/
 
 .ads-img {
     width: 20vw;
     margin: 5px 0;
+}
+
+.ads > .calendar {
+    margin-top: 50px;
 }
 
 /* FOOTER*/
@@ -687,6 +890,50 @@ footer img {
 
 /* END: FOOTER*/
 
+/*template calendar page*/
+
+.temp-calendar-page > img {
+    max-height: 200px;
+    max-width: 250px;
+    float: right;
+    order: -1;
+}
+
+.temp-calendar-page,
+.article-institution {
+    margin-left: 70px;
+    display: grid;
+    grid-template-columns: 250px 2fr;
+    grid-gap: 29px;
+    margin-bottom: 10px;
+}
+
+.article-institution {
+    grid-column: 1/-1;
+    max-width: 300px;
+}
+
+.temp-paragraph {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.temp-event-name {
+    margin: 0;
+}
+
+.temp-artist {
+    margin-top: 5px;
+}
+
+.temp-calendar-page {
+    margin-bottom: 30px;
+}
+
+.hide {
+    display: none;
+}
+
 @media only screen and (max-width:950px) {
     /*the size is just a random guess, need to change when we find the correct one*/
 
@@ -708,6 +955,8 @@ footer img {
     main {
         grid-column: 1;
         grid-row: 3;
+        margin: 20px;
+
     }
 
     .ads {
@@ -771,6 +1020,30 @@ footer img {
         width: 44%;
     }
 
+    /*    Calendar page*/
+
+    /*template calendar page*/
+
+    .calendar-top {
+        grid-gap: 40px;
+    }
+
+    .temp-calendar-page > img {
+        max-height: 200px;
+        max-width: 250px;
+        float: inherit;
+        order: -1;
+    }
+
+    .temp-calendar-page,
+    .article-institution {
+        display: block;
+    }
+
+    .temp-calendar-page {
+        padding-bottom: 20px;
+        border-bottom: 1px solid black;
+    }
 }
 
 
@@ -822,4 +1095,24 @@ footer img {
         width: 100%;
     }
 
+    .quick-search {
+        margin-top: 281px;
+        margin-left: -193px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .calendar-top {
+        display: block;
+        margin-left: 100px;
+    }
+
 }
+
+
+
+/* burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
+https://www.youtube.com/watch?v=BN6fH1nRDxA
+*/
