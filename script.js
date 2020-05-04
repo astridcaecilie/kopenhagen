@@ -120,43 +120,60 @@ function handleData(handled) {
 
         var theInstitutionIds = [];
         var theInstitutionNames = [];
+        var theInstitutionLocation = [];
 
 
 
-                console.log(handledCatData)
+//                console.log(handledCatData)
 //                console.log("hey")
 
 
         // For the location
-
-        if (handledCatData.parent == 11) {
-            var locationId = handledCatData.id;
-            var locationName = handledCatData.name;
-            //                    console.log(locationId);
-            //                    console.log(locationName);
-            theLocationIds.push(locationId);
-            theLocationNames.push(locationName);
-            //            console.log(theLocationIds);
-            //            console.log(theLocationNames);
-            var regionsUl = document.querySelector(".regionsFetched #" + theLocationNames);
-
-             console.log("hey");
-        }
+//
+//        if (handledCatData.parent == 11) {
+//            var locationId = handledCatData.id;
+//            var locationName = handledCatData.name;
+//            //                    console.log(locationId);
+//            //                    console.log(locationName);
+//            theLocationIds.push(locationId);
+//            theLocationNames.push(locationName);
+//            //            console.log(theLocationIds);
+//            //            console.log(theLocationNames);
+//
+//
+//            var regionsUl = document.querySelector(".regionsFetched #" + theLocationNames);
+//            console.log(regionsUl)
+//
+////             console.log("location");
+//        }
 
         //for the Institution name
-        else if (handledCatData.parent == 2) {
+        if (handledCatData.parent == 2) {
             var institutionId = handledCatData.id;
             var institutionName = handledCatData.name;
+             var institutionLocation = handledCatData.description;
+//             console.log(handledCatData.description);
             //                    console.log(locationId);
             //                    console.log(locationName);
             theInstitutionIds.push(institutionId);
             theInstitutionNames.push(institutionName);
+//            theInstitutionLocation.push(institutionLocation);
+
             //          console.log(theInstitutionIds);
-                                    console.log(theInstitutionNames);
+//                                    console.log(theInstitutionNames);
 
             var institutionLi = document.createElement("li");
             institutionLi.textContent = institutionName;
-//            console.log(handledCatData.name);
+//            console.log(institutionLi);
+
+            var regionsUl = document.querySelector(".regionsFetched #" + institutionLocation);
+            console.log(regionsUl);
+
+            regionsUl.appendChild(institutionLi);
+
+        if (regionsUl > institutionLi) {
+            regionsUl.classList.remove("hide");
+        }
         }
     }
 }
