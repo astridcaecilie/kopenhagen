@@ -66,8 +66,8 @@ function handleData(handled) {
     });
 
 
-    categoryIds.forEach(fetchingCat);
-    categoryIds.forEach(compare);
+//    categoryIds.forEach(fetchingCat);
+//    categoryIds.forEach(compare);
     //        console.log(categoryIds)
 
     //categoryNames.forEach(displayCategoryName)
@@ -78,7 +78,9 @@ function handleData(handled) {
     artistNames.forEach(showTagData);
 
     function fetchingCat(categories) {
-        fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/" + categories)
+        fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/"
+//              + categories
+             )
             .then(res => res.json())
             .then(handleCategories)
     }
@@ -93,9 +95,13 @@ function handleData(handled) {
         var theInstitutionNames = [];
 
 
-        //        console.log(handledCatData.name)
+
+                console.log(handledCatData)
+//                console.log("hey")
+
 
         // For the location
+
         if (handledCatData.parent == 11) {
             var locationId = handledCatData.id;
             var locationName = handledCatData.name;
@@ -107,7 +113,7 @@ function handleData(handled) {
             //            console.log(theLocationNames);
             var regionsUl = document.querySelector(".regionsFetched #" + theLocationNames);
 
-//             console.log(locationName);
+             console.log("hey");
         }
 
         //for the Institution name
@@ -117,15 +123,20 @@ function handleData(handled) {
             //                    console.log(locationId);
             //                    console.log(locationName);
             theInstitutionIds.push(institutionId);
-//            theInstitutionNames.push(institutionName);
+            theInstitutionNames.push(institutionName);
             //          console.log(theInstitutionIds);
-            //                        console.log(theInstitutionNames);
+                                    console.log(theInstitutionNames);
 
             var institutionLi = document.createElement("li");
             institutionLi.textContent = institutionName;
-            console.log(handledCatData.name);
+//            console.log(handledCatData.name);
         }
 
+//        console.log(theLocationIds);
+//        console.log(theLocationNames);
+//        console.log(allCategoryNames);
+//        console.log(theInstitutionIds);
+//        console.log(theInstitutionNames);
 //        theInstitutionNames.forEach(showInstitutionName);
 //
 //        function showInstitutionName(institutionNameDisplay) {
@@ -247,12 +258,6 @@ function handleData(handled) {
 //
 //}
 
-if (artists.html == true){
-    console.log("yes")
-} else{
-    console.log("no")
-}
-
 function showTagData(artistNameData) {
     //    console.log("artistNameData");
     //    console.log(artistNameData);
@@ -274,7 +279,6 @@ function showTagData(artistNameData) {
         if (elem > artistLi) {
             elem.classList.remove("hide");
         }
-
     }
 }
 
