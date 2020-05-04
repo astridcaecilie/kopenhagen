@@ -141,6 +141,10 @@ function showTagData(artistNameData) {
     }
 }
 
+function hasTheId(theId){
+    const copy = template.cloneNode(true);
+}
+
 
 // burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 // https://www.youtube.com/watch?v=BN6fH1nRDxA ;
