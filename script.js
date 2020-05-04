@@ -57,7 +57,7 @@ function showEvents(events) {
 
     }
 
-    //    console.log(events._embedded["wp:term"][1][0].name);
+        console.log(events._embedded["wp:term"][0][1].name);
 
     //    copy.querySelector(".temp.institution").textContent = events._embedded["wp:term"][1][0].name;
     copy.querySelector(".temp-event-name").textContent = events.title.rendered;
