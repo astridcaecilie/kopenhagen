@@ -22,6 +22,7 @@ fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/magazine" + 
 function handleData(handled) {
     var artistNames = [];
     var categoryIds = [];
+    var categoryNames = [];
 
     //console.log("handled");
     //    console.log(handled);
@@ -54,15 +55,9 @@ function handleData(handled) {
             //Now I push it outside of this function and create an array from it
             //            console.log(catId);
             categoryIds.push(catId);
-            //            categoryNames.push(catName);
+            categoryNames.push(catName);
+
         });
-
-
-
-
-        //                categoryIds.forEach(testCategoryData);
-
-
     });
 
 
@@ -71,15 +66,47 @@ function handleData(handled) {
     //        console.log(categoryIds)
 
     //categoryNames.forEach(displayCategoryName)
+    categoryIds.sort();
+    categoryNames.sort();
+//    categoryIds.forEach(noRepeat);
+
+    function noRepeat(array){
+        var noRepeatArray = [];
 
 
+        // Loop through array values
+        for(i=0; i < array.length; i++){
+            if(noRepeatArray.indexOf(array[i]) === -1) {
+                noRepeatArray.push(array[i]);
+            }
+        }
+        return noRepeatArray;
+
+    }
+//console.log(categoryIds)
+
+//     console.log("categoryNames");
+    var catNamesNoRepeat = (noRepeat(categoryNames));
+    var catIdsNoRepeat = (noRepeat(categoryIds));
+//    console.log(catNamesNoRepeat);
+//    console.log(catIdsNoRepeat);
+
+//
+
+//    console.log("categoryIds");
+//    console.log();
+//    console.log(categoryIds);
+//    console.log(find_duplicate_in_array(categoryIds));
+//
+
+    catIdsNoRepeat.forEach(fetchingCat)
 
     artistNames.sort();
     artistNames.forEach(showTagData);
 
     function fetchingCat(categories) {
         fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/"
-//              + categories
+              + categories
              )
             .then(res => res.json())
             .then(handleCategories)
@@ -131,132 +158,9 @@ function handleData(handled) {
             institutionLi.textContent = institutionName;
 //            console.log(handledCatData.name);
         }
-
-//        console.log(theLocationIds);
-//        console.log(theLocationNames);
-//        console.log(allCategoryNames);
-//        console.log(theInstitutionIds);
-//        console.log(theInstitutionNames);
-//        theInstitutionNames.forEach(showInstitutionName);
-//
-//        function showInstitutionName(institutionNameDisplay) {
-
-
-//        if (theInstitutionNames == 0) {
-////            console.log("no")
-//            } else {
-//               var institutionLi = document.createElement("li");
-//                institutionLi.textContent = theInstitutionNames;
-//
-//
-////                var regionsUl = document.querySelector(".regionsFetched #" + theLocationNames);
-////                regionsUl.appendChild(institutionLi);
-////            console.log("yey")
-//            }
-
-
-                //  console.log(".artistsFetched #" + firstLetter);
-
-
-
-//            console.log(institutionLi)
-//            console.log(theLocationNames)
-
-
-
-//                const regionH2 = document.querySelector(".regions");
-
-//                if (regionsUl > institutionLi) {regionsElem.classList.remove("hide");}
-
-//        }
-
-
-
-
-
-
-
-
-
-        //    handledCatData.forEach(locationCategories);
-        //     console.log(handledCatData)
-    }
-
-    function locationCategories(locationCat) {
-        //        console.log("locationCat")
-        //        console.log(locationCat)
-        //        console.log("categoryIds")
-        //        console.log(categoryIds)
-        //        var theLocationIds = [];
-
-        //        console.log(locationCat.parent == 11)
-        //        if (locationCat.parent !== 11) {
-        //            console.log("no")
-        //
-        //        } else {
-        ////
-        //            console.log("locationCat.id")
-        ////            console.log(locationCat.id)
-        //           var locationCatId = locationCat.id;
-        ////            var stringCatId = locationCatId.toString();
-        ////            console.log(stringCatId)
-        //             theLocationIds.push(locationCatId);
-        //        }
-        //            console.log
-
-        //                    console.log(theLocationIds)
-
-        //theLocationIds.forEach(compare)
-
-        //        var locationId = locationCat.parent == 11;
-        //        console.log(locationId)
-
-    }
-
-    function compare(compared) {
-        //        if (locationId == categoryIds) {
-        //            console.log("yey")
-        //        }
     }
 }
 
-
-//fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories")
-//    .then(res => res.json())
-//    .then(handleCategoryData)
-//
-//
-//function handleCategoryData(catHandled) {
-//    catHandled.forEach(testCategoryData);
-//    console.log("catHandled")
-//    console.log(catHandled)
-//}
-//
-//function testCategoryData(categories) {
-//    console.log("categories")
-//    console.log(categories)
-//
-//}
-
-
-//function fetchingCat (categories) {
-//    fetch("https://astridcaecilie.dk/kopenhagen/wordpress/wp-json/wp/v2/categories/" + categories)
-//        .then(res => res.json())
-//        .then(showLocationCategories)
-//}
-//function showLocationCategories (locationCat){
-////    console.log(locationCat)
-//    if (locationCat.parent == 11) {
-////        console.log("Location!");
-//        var locationId = [""];
-//
-//    }
-//locationId.forEach(compareCategories)
-//}
-//
-//function compareCategories (compared){
-//
-//}
 
 function showTagData(artistNameData) {
     //    console.log("artistNameData");
@@ -285,3 +189,5 @@ function showTagData(artistNameData) {
 
 // burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
 // https://www.youtube.com/watch?v=BN6fH1nRDxA ;
+
+//Deleting repeating values in an array https://www.tutorialrepublic.com/faq/how-to-remove-duplicate-values-from-a-javascript-array.php
