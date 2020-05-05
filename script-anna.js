@@ -105,7 +105,7 @@ function handleData(handled) {
             institutionLi.textContent = institutionName;
 
             var regionsUl = document.querySelector(".regionsFetched #" + institutionLocation);
-            console.log(regionsUl);
+            //            console.log(regionsUl);
 
             regionsUl.appendChild(institutionLi);
 
@@ -114,8 +114,17 @@ function handleData(handled) {
             }
         }
     }
+
+
+
 }
 
+function hasTheId(theId) {
+    console.log("theId")
+    const template = document.querySelector(".templateHasTheID").content;
+    console.log(template)
+    const copy = template.cloneNode(true);
+}
 
 function showTagData(artistNameData) {
     //create a li with each artist name
@@ -140,6 +149,8 @@ function showTagData(artistNameData) {
         }
     }
 }
+
+
 
 
 // burger menu code inspired by these two sites: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js and
